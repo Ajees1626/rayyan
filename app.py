@@ -8,16 +8,8 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins=[
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
-    'http://localhost:3000',
-    'http://192.168.1.3:5173',
-    'http://192.168.1.3:3000',
-    'https://rayyan-2.onrender.com',
-    'https://rayyan.onrender.com',
-    'https://rayyan-1.onrender.com',
-])
+# Allow all origins for /api/* routes (public contact form)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # SMTP Config from env
 SMTP_HOST = os.getenv('SMTP_HOST', 'smtp.gmail.com')
