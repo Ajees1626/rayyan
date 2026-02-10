@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const projects = [
@@ -9,8 +9,16 @@ const projects = [
     service: 'UPVC Sliding Windows',
     category: 'RESIDENTIAL',
     categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80',
     overlayText: 'Team Crete window replacement for 200+ units with soundproof UPVC sliding windows.',
+    about:
+      'Complete window replacement for 200+ units with premium UPVC sliding windows designed for soundproofing and energy efficiency.',
+    solution: 'UPVC Sliding Windows',
+    gallery: [
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80',
+    ],
   },
   {
     id: 2,
@@ -19,8 +27,16 @@ const projects = [
     service: 'Aluminium French Doors',
     category: 'RESIDENTIAL',
     categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
     overlayText: 'Custom-designed aluminium French doors and glass railings for a premium villa.',
+    about:
+      'Modernisation of a government office facade with high-performance aluminium French doors, increasing natural light and security.',
+    solution: 'Aluminium French Doors',
+    gallery: [
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=80',
+    ],
   },
   {
     id: 3,
@@ -29,8 +45,16 @@ const projects = [
     service: 'Glass Façade System',
     category: 'COMMERCIAL',
     categoryColor: 'bg-teal-700',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80',
     overlayText: null,
+    about:
+      'Glass façade system for a commercial complex, blending contemporary aesthetics with thermal and acoustic performance.',
+    solution: 'Glass Façade System',
+    gallery: [
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
+    ],
   },
   {
     id: 4,
@@ -39,8 +63,16 @@ const projects = [
     service: 'UPVC Casement Windows',
     category: 'RESIDENTIAL',
     categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80',
     overlayText: null,
+    about:
+      'UPVC casement windows installed for a premium independent house, enhancing ventilation and insulation.',
+    solution: 'UPVC Casement Windows',
+    gallery: [
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80',
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80',
+    ],
   },
   {
     id: 5,
@@ -49,8 +81,16 @@ const projects = [
     service: 'Balcony Sliding Doors',
     category: 'RESIDENTIAL',
     categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80',
     overlayText: null,
+    about:
+      'Balcony sliding doors for a multi-storey residence, connecting indoor living spaces with outdoor views.',
+    solution: 'Balcony Sliding Doors',
+    gallery: [
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=80',
+    ],
   },
   {
     id: 6,
@@ -59,8 +99,16 @@ const projects = [
     service: 'Structural Glazing',
     category: 'COMMERCIAL',
     categoryColor: 'bg-teal-700',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
     overlayText: null,
+    about:
+      'High-rise structural glazing project delivering a sleek, modern exterior with optimised daylight and performance.',
+    solution: 'Structural Glazing',
+    gallery: [
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80',
+    ],
   },
 ]
 
@@ -68,6 +116,42 @@ const filters = ['ALL', 'RESIDENTIAL', 'COMMERCIAL']
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('ALL')
+  const [activeProject, setActiveProject] = useState(null)
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
+
+  useEffect(() => {
+    if (activeProject) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [activeProject])
+
+  const openProjectModal = (project) => {
+    setActiveProject(project)
+    setActiveImageIndex(0)
+  }
+
+  const closeProjectModal = () => {
+    setActiveProject(null)
+  }
+
+  const handlePrevImage = () => {
+    if (!activeProject?.gallery?.length) return
+    setActiveImageIndex((prev) =>
+      prev === 0 ? activeProject.gallery.length - 1 : prev - 1
+    )
+  }
+
+  const handleNextImage = () => {
+    if (!activeProject?.gallery?.length) return
+    setActiveImageIndex((prev) =>
+      prev === activeProject.gallery.length - 1 ? 0 : prev + 1
+    )
+  }
 
   const filteredProjects =
     activeFilter === 'ALL'
@@ -143,7 +227,8 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
             {filteredProjects.map((project) => (
               <article
                 key={project.id}
-                className="group bg-white rounded-xl border border-teal-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                className="group bg-white rounded-xl border border-teal-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                onClick={() => openProjectModal(project)}
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
@@ -175,15 +260,19 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
                     <span className="inline-block px-3 py-1.5 bg-teal-100 text-teal-700 text-sm font-medium rounded">
                       {project.service}
                     </span>
-                    <Link
-                      to="/contact"
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        openProjectModal(project)
+                      }}
                       className="inline-flex items-center gap-2 text-teal-600 text-sm font-medium hover:underline"
                     >
                       View Details
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </article>
@@ -191,6 +280,174 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
           </div>
         </div>
       </section>
+
+      {/* Project Detail Modal */}
+      {activeProject && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm px-4">
+          <div className="relative w-full max-w-6xl bg-white rounded-3xl overflow-hidden shadow-2xl">
+            {/* Close button */}
+            <button
+              type="button"
+              onClick={closeProjectModal}
+              className="absolute top-4 right-4 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow hover:bg-slate-100"
+              aria-label="Close project details"
+            >
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              </svg>
+            </button>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              {/* Left - Main image with slider controls */}
+              <div className="relative bg-slate-900">
+                <div className="aspect-[4/3] w-full overflow-hidden">
+                  <img
+                    src={activeProject.gallery?.[activeImageIndex] || activeProject.image}
+                    alt={activeProject.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+                {activeProject.gallery?.length > 1 && (
+                  <>
+                    {/* Prev */}
+                    <button
+                      type="button"
+                      onClick={handlePrevImage}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-teal-400 bg-white/90 text-teal-700 shadow hover:bg-white"
+                      aria-label="Previous image"
+                    >
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </button>
+                    {/* Next */}
+                    <button
+                      type="button"
+                      onClick={handleNextImage}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-teal-400 bg-white/90 text-teal-700 shadow hover:bg-white"
+                      aria-label="Next image"
+                    >
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </button>
+
+                    {/* Counter */}
+                    <div className="absolute left-4 top-4 rounded-full bg-slate-900/70 px-3 py-1 text-xs font-medium text-white">
+                      {activeImageIndex + 1} / {activeProject.gallery.length}
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* Right - Details */}
+              <div className="flex flex-col gap-6 p-6 sm:p-8 lg:p-10 bg-slate-50">
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-teal-600 mb-2">
+                    Completed Project
+                  </p>
+                  <h2 className="font-serif text-3xl sm:text-4xl font-medium text-slate-900 mb-3">
+                    {activeProject.title}
+                  </h2>
+                  <div className="flex flex-wrap items-center gap-3 text-sm mb-4">
+                    <div className="inline-flex items-center gap-1.5 text-slate-700">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M12 21s-6.5-4.485-6.5-10A6.5 6.5 0 1118.5 11c0 5.515-6.5 10-6.5 10z"
+                          stroke="currentColor"
+                          strokeWidth="1.6"
+                        />
+                        <circle cx="12" cy="11" r="2.5" stroke="currentColor" strokeWidth="1.4" />
+                      </svg>
+                      <span>{activeProject.location}</span>
+                    </div>
+                    <span className="inline-flex items-center rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-700 border border-teal-200">
+                      {activeProject.category}
+                    </span>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-800 mb-1.5">
+                        About This Project
+                      </h3>
+                      <p className="text-sm text-slate-700 leading-relaxed">
+                        {activeProject.about || activeProject.overlayText}
+                      </p>
+                    </div>
+
+                    <div className="rounded-xl border border-teal-100 bg-white px-4 py-3 flex items-start gap-3 shadow-sm">
+                      <div className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-teal-600 text-white">
+                        <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0L3.293 11.5a1 1 0 011.414-1.414l3.043 3.043 7.543-7.543a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-slate-800">
+                          Solution Provided
+                        </p>
+                        <p className="text-sm font-medium text-slate-900">
+                          {activeProject.solution || activeProject.service}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Project gallery thumbnails */}
+                {activeProject.gallery?.length > 1 && (
+                  <div className="mt-2">
+                    <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-800 mb-3">
+                      Project Gallery
+                    </h3>
+                    <div className="grid grid-cols-3 gap-2">
+                      {activeProject.gallery.map((img, idx) => (
+                        <button
+                          key={img}
+                          type="button"
+                          onClick={() => setActiveImageIndex(idx)}
+                          className={`relative aspect-[4/3] overflow-hidden rounded-lg border ${
+                            activeImageIndex === idx ? 'border-teal-500 ring-2 ring-teal-200' : 'border-slate-200'
+                          }`}
+                        >
+                          <img
+                            src={img}
+                            alt={`${activeProject.title} thumbnail ${idx + 1}`}
+                            className="h-full w-full object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* CTA buttons */}
+                <div className="mt-auto flex flex-wrap gap-3">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center justify-center rounded-lg bg-teal-600 px-6 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 transition-colors"
+                    onClick={closeProjectModal}
+                  >
+                    Get Free Quote
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={closeProjectModal}
+                    className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-6 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Stats Section */}
       <section className="py-16 lg:py-20 bg-slate-50">

@@ -3,6 +3,17 @@ import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { GoArrowUpRight } from 'react-icons/go'
 
+const serviceSlugMap = {
+  'UPVC Windows': 'upvc-windows',
+  'UPVC Doors': 'upvc-doors',
+  'UPVC Interior': 'upvc-interior',
+  'Wooden Doors': 'wooden-doors',
+  'Wooden Frames': 'wooden-frames',
+  'Interior Room Doors': 'interior-room-doors',
+  'WPC Doors': 'wpc-doors',
+  'Screens & Blinds': 'screens-and-blinds',
+}
+
 const servicesItems = [
   { label: 'UPVC Windows', bgColor: '#0d9488', links: ['Sliding Windows', 'Casement Windows'] },
   { label: 'UPVC Doors', bgColor: '#f59e0b', links: ['Sliding Door', 'Folding Door'] },
@@ -44,7 +55,9 @@ function ServicesCardDropdown({ isOpen, onClose }) {
   }, [isOpen])
 
   const setCardRef = (i) => (el) => {
-    if (el) cardsRef.current[i] = el
+    // Important: React calls ref callbacks with `null` on unmount.
+    // We must write the `null` back so we don't keep stale DOM refs around.
+    cardsRef.current[i] = el
   }
 
   return (
@@ -58,39 +71,44 @@ function ServicesCardDropdown({ isOpen, onClose }) {
         onMouseLeave={onClose}
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {servicesItems.map((item, idx) => (
-            <div
-              key={`${item.label}-${idx}`}
-              ref={setCardRef(idx)}
-              className="flex flex-col gap-2 p-4 rounded-lg min-h-[140px]"
-              style={{ backgroundColor: item.bgColor, color: '#fff' }}
-            >
-              <div className="font-semibold tracking-tight text-base">
-                {item.label}
-              </div>
-              <div className="flex flex-col gap-1 flex-1">
-                {item.links.map((lnk) => (
+          {servicesItems.map((item, idx) => {
+            const slug = serviceSlugMap[item.label]
+            const detailPath = slug ? `/services/${slug}` : '/services'
+
+            return (
+              <div
+                key={`${item.label}-${idx}`}
+                ref={setCardRef(idx)}
+                className="flex flex-col gap-2 p-4 rounded-lg min-h-[140px]"
+                style={{ backgroundColor: item.bgColor, color: '#fff' }}
+              >
+                <div className="font-semibold tracking-tight text-base">
+                  {item.label}
+                </div>
+                <div className="flex flex-col gap-1 flex-1">
+                  {item.links.map((lnk) => (
+                    <Link
+                      key={lnk}
+                      to={detailPath}
+                      className="inline-flex items-center gap-2 no-underline text-inherit hover:opacity-90 transition-opacity text-sm"
+                      onClick={onClose}
+                    >
+                      <GoArrowUpRight className="shrink-0 text-sm" aria-hidden="true" />
+                      {lnk}
+                    </Link>
+                  ))}
                   <Link
-                    key={lnk}
                     to="/services"
-                    className="inline-flex items-center gap-2 no-underline text-inherit hover:opacity-90 transition-opacity text-sm"
+                    className="inline-flex items-center gap-2 no-underline text-inherit hover:opacity-90 transition-opacity text-sm mt-auto"
                     onClick={onClose}
                   >
                     <GoArrowUpRight className="shrink-0 text-sm" aria-hidden="true" />
-                    {lnk}
+                    View All
                   </Link>
-                ))}
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-2 no-underline text-inherit hover:opacity-90 transition-opacity text-sm mt-auto"
-                  onClick={onClose}
-                >
-                  <GoArrowUpRight className="shrink-0 text-sm" aria-hidden="true" />
-                  View All
-                </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
         <div className="flex justify-center mt-4">
           <Link

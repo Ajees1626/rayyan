@@ -3,6 +3,17 @@ import { NavLink } from 'react-router-dom'
 import { GoArrowUpRight } from 'react-icons/go'
 import ServicesCardDropdown from './ServicesCardDropdown'
 
+const serviceSlugMap = {
+  'UPVC Windows': 'upvc-windows',
+  'UPVC Doors': 'upvc-doors',
+  'UPVC Interior': 'upvc-interior',
+  'Wooden Doors': 'wooden-doors',
+  'Wooden Frames': 'wooden-frames',
+  'Interior Room Doors': 'interior-room-doors',
+  'WPC Doors': 'wpc-doors',
+  'Screens & Blinds': 'screens-and-blinds',
+}
+
 const mobileServicesCards = [
   { label: 'UPVC Windows', color: 'bg-teal-600', links: ['Sliding Windows', 'Casement Windows'] },
   { label: 'UPVC Doors', color: 'bg-amber-500', links: ['Sliding Door', 'Folding Door'] },
@@ -19,16 +30,20 @@ function MobileServicesSection({ onLinkClick }) {
     <div className="mt-2">
       {/* Simple list with vertical teal line (Image 2 style) */}
       <div className="relative pl-4 border-l-2 border-teal-500 ml-2 space-y-0">
-        {mobileServicesCards.map((item) => (
-          <NavLink
-            key={item.label}
-            to="/services"
-            className="block py-2.5 text-slate-800 hover:text-teal-600 text-sm"
-            onClick={onLinkClick}
-          >
-            {item.label}
-          </NavLink>
-        ))}
+        {mobileServicesCards.map((item) => {
+          const slug = serviceSlugMap[item.label]
+          const detailPath = slug ? `/services/${slug}` : '/services'
+          return (
+            <NavLink
+              key={item.label}
+              to={detailPath}
+              className="block py-2.5 text-slate-800 hover:text-teal-600 text-sm"
+              onClick={onLinkClick}
+            >
+              {item.label}
+            </NavLink>
+          )
+        })}
       </div>
       {/* View All Services → */}
       <NavLink
@@ -43,21 +58,24 @@ function MobileServicesSection({ onLinkClick }) {
       </NavLink>
       {/* Colored card blocks (Image 1 style) */}
       <div className="mt-3 flex flex-col gap-2">
-        {mobileServicesCards.map((item) => (
-          <div key={item.label} className={`rounded-lg p-3 ${item.color} text-white`}>
-            <div className="font-semibold text-sm mb-2">{item.label}</div>
-            <div className="flex flex-col gap-1">
-              {item.links.map((lnk) => (
-                <NavLink
-                  key={lnk}
-                  to="/services"
-                  className="inline-flex items-center gap-2 text-sm hover:opacity-90"
-                  onClick={onLinkClick}
-                >
-                  <GoArrowUpRight className="shrink-0" />
-                  {lnk}
-                </NavLink>
-              ))}
+        {mobileServicesCards.map((item) => {
+          const slug = serviceSlugMap[item.label]
+          const detailPath = slug ? `/services/${slug}` : '/services'
+          return (
+            <div key={item.label} className={`rounded-lg p-3 ${item.color} text-white`}>
+              <div className="font-semibold text-sm mb-2">{item.label}</div>
+              <div className="flex flex-col gap-1">
+                {item.links.map((lnk) => (
+                  <NavLink
+                    key={lnk}
+                    to={detailPath}
+                    className="inline-flex items-center gap-2 text-sm hover:opacity-90"
+                    onClick={onLinkClick}
+                  >
+                    <GoArrowUpRight className="shrink-0" />
+                    {lnk}
+                  </NavLink>
+                ))}
               <NavLink
                 to="/services"
                 className="inline-flex items-center gap-2 text-sm hover:opacity-90 mt-1"
@@ -66,9 +84,10 @@ function MobileServicesSection({ onLinkClick }) {
                 <GoArrowUpRight className="shrink-0" />
                 View All
               </NavLink>
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import servicesData from '../data/services.json'
 
 const iconMap = {
@@ -46,28 +46,100 @@ const iconMap = {
 
 const serviceIcons = ['house', 'building', 'grid', 'cube', 'frame', 'door', 'box', 'blinds']
 
+// Helper function to create slug from service title
+const createSlug = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+}
+
 function Services() {
+  const navigate = useNavigate()
+
   const services = servicesData.services.map((s, i) => ({
     ...s,
     icon: iconMap[serviceIcons[i]] || iconMap.house,
+    slug: createSlug(s.title),
   }))
 
+  const additionalServices = [
+    {
+      title: 'Site Measurement & Design',
+      description: 'Accurate measurements and 3D design layouts for perfect fit.',
+      bg: 'bg-teal-600',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M3 7a4 4 0 014-4h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11h10M7 15h6" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Professional Installation',
+      description: 'Experienced installation team ensuring dust-free and precise fitting.',
+      bg: 'bg-amber-500',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.7 6.3l3 3-8.4 8.4H6.3v-3L14.7 6.3z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.3 7.7l3 3" />
+        </svg>
+      ),
+    },
+    {
+      title: 'After-Sales Support',
+      description: 'Comprehensive warranty and annual maintenance contracts available.',
+      bg: 'bg-teal-600',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
+        </svg>
+      ),
+    },
+  ]
+
   return (
-    <div className="bg-white">
-      {/* Hero Section - Centered */}
+    <div className="bg-slate-50">
+      {/* Hero Section */}
       <section className="py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <span className="inline-block px-4 py-1.5 bg-teal-100 text-slate-800 text-xs font-medium uppercase tracking-wider rounded-full mb-6">
-              OUR SERVICES
-            </span>
-            <h1 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-medium uppercase leading-tight mb-6">
-              <span className="block text-slate-900">PREMIUM</span>
-              <span className="block text-teal-600 mt-1">SOLUTIONS</span>
-            </h1>
-            <p className="text-slate-600 max-w-2xl mx-auto text-base sm:text-lg">
-              Comprehensive windows and doors solutions for residential and commercial spaces
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Heading & Buttons */}
+            <div>
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase leading-tight mb-8">
+                <span className="block text-slate-900">COMPLETE</span>
+                <span className="block text-teal-600">WINDOWS & DOORS</span>
+                <span className="block text-slate-900">SOLUTIONS</span>
+              </h1>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors shadow-sm"
+                >
+                  GET FREE QUOTE
+                </Link>
+                <Link
+                  to="/projects"
+                  className="inline-flex items-center px-6 py-3 bg-white text-teal-600 font-medium rounded-lg border-2 border-teal-600 hover:bg-teal-50 transition-colors"
+                >
+                  VIEW PROJECTS
+                </Link>
+              </div>
+            </div>
+
+            {/* Right - Image */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] lg:aspect-[5/4] bg-slate-200">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80"
+                  alt="Modern interior entryway with doors and windows"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -75,11 +147,34 @@ function Services() {
       {/* Services Grid - 8 cards */}
       <section className="py-8 lg:py-16 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-1.5 bg-teal-100 text-slate-800 text-xs font-medium uppercase tracking-wider rounded-full mb-4">
+              OUR SERVICES
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-medium uppercase leading-tight mb-3">
+              <span className="text-slate-900">PREMIUM </span>
+              <span className="text-teal-600">SOLUTIONS</span>
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Comprehensive windows and doors solutions for residential and commercial spaces
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service) => (
               <article
                 key={service.id}
-                className="group bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:border-teal-200 transition-all"
+                className="group bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-200 transition-all cursor-pointer"
+                onClick={() => navigate(`/services/${service.slug}`)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    navigate(`/services/${service.slug}`)
+                  }
+                }}
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
@@ -105,19 +200,79 @@ function Services() {
                     {service.products} Products
                   </p>
                   <p className="text-slate-600 text-sm mb-4 line-clamp-2">{service.description}</p>
-                  <Link
-                    to="/contact"
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      navigate(`/services/${service.slug}`)
+                    }}
                     className="inline-flex items-center gap-1.5 text-teal-600 text-sm font-medium hover:underline"
                   >
                     View Details
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </Link>
+                  </button>
                 </div>
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Additional Services */}
+      <section className="py-16 lg:py-20 bg-amber-50/40">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-900 text-xs font-medium uppercase tracking-wider rounded-full mb-4">
+              ADDITIONAL SERVICES
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-medium uppercase text-slate-900 mb-3">
+              ADDITIONAL <span className="text-teal-600">SERVICES</span>
+            </h2>
+            <p className="text-slate-600 max-w-xl mx-auto">
+              We provide comprehensive support throughout your project lifecycle
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {additionalServices.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-lg border border-slate-200 shadow-sm px-5 py-4 flex items-center gap-4"
+              >
+                <div className={`w-10 h-10 rounded-md ${item.bg} text-white flex items-center justify-center shrink-0`}>
+                  {item.icon}
+                </div>
+                <div className="min-w-0">
+                  <h3 className="font-serif text-base sm:text-lg font-medium text-slate-900 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-snug mt-0.5">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 lg:py-20 bg-teal-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-white uppercase mb-6">
+            NEED A CUSTOM SOLUTION?
+          </h2>
+          <p className="text-white text-lg sm:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+            Our team can design and manufacture custom windows and doors tailored to your specific needs and architectural style.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-white text-teal-600 font-medium rounded-lg hover:bg-slate-50 transition-colors shadow-lg uppercase"
+          >
+            GET FREE CONSULTATION
+          </Link>
         </div>
       </section>
     </div>
