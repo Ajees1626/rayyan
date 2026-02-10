@@ -11,7 +11,12 @@ app = Flask(__name__)
 # Allow all origins for /api/* routes (public contact form)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-
+# SMTP Config from env
+SMTP_HOST = os.getenv('SMTP_HOST', 'smtp.gmail.com')
+SMTP_PORT = int(os.getenv('SMTP_PORT', '587'))
+SMTP_USER = os.getenv('SMTP_USER', '')
+SMTP_PASS = os.getenv('SMTP_PASS', '')
+MAIL_TO = os.getenv('MAIL_TO', 'windowsrayyan@gmail.com')
 
 
 def send_enquiry_to_rayyan(data):
