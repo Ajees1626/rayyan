@@ -21,9 +21,9 @@ function WhyChooseUs() {
             <span className="inline-block px-4 py-1.5 bg-teal-100 text-slate-900 text-xs font-semibold uppercase tracking-wider rounded mb-6">
               WHY CHOOSE US
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium mb-6">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium mb-6">
               <span className="block text-slate-900">BUILT FOR</span>
-              <span className="block text-teal-600 mt-1 pl-4">EXCELLENCE</span>
+              <span className="block text-teal-600 mt-1">EXCELLENCE</span>
             </h2>
             <p className="text-slate-600 mb-8 leading-relaxed">
               We combine international-grade hardware with locally engineered profiles to handle Indian climate conditions. Every project is crafted with precision and attention to detail.
@@ -52,7 +52,7 @@ function WhyChooseUs() {
                 key={stat.label}
                 className="bg-amber-400 rounded-xl p-8 flex flex-col justify-center min-h-[140px]"
               >
-                <p className="text-3xl sm:text-4xl font-semibold text-white">{stat.value}</p>
+                <p className="font-serif text-3xl sm:text-4xl font-semibold text-white">{stat.value}</p>
                 <p className="text-white/95 text-sm mt-1">{stat.label}</p>
               </div>
             ))}

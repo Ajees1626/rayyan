@@ -103,17 +103,32 @@ function Services() {
   return (
     <div className="bg-slate-50">
       {/* Hero Section */}
-      <section className="py-12 lg:py-20">
+      <section className="py-10 sm:py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             {/* Left - Heading & Buttons */}
-            <div>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase leading-tight mb-8">
+            <div 
+              onClick={() => navigate('/projects')}
+              className="max-w-xl cursor-pointer p-4 sm:p-6 rounded-xl hover:bg-slate-50 transition-colors"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  navigate('/projects')
+                }
+              }}
+            >
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium uppercase leading-tight mb-6 sm:mb-8">
                 <span className="block text-slate-900">COMPLETE</span>
                 <span className="block text-teal-600">WINDOWS & DOORS</span>
                 <span className="block text-slate-900">SOLUTIONS</span>
               </h1>
-              <div className="flex flex-wrap gap-4">
+              <p className="text-slate-600 text-sm sm:text-base mb-6 sm:mb-8">
+                Explore our full range of UPVC, wooden, and aluminium solutions designed for Indian homes and
+                commercial spaces.
+              </p>
+              <div className="flex flex-wrap gap-3 sm:gap-4" onClick={(e) => e.stopPropagation()}>
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors shadow-sm"
@@ -130,8 +145,8 @@ function Services() {
             </div>
 
             {/* Right - Image */}
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] lg:aspect-[5/4] bg-slate-200">
+            <div className="relative max-w-xl w-full mx-auto lg:mx-0">
+              <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[16/10] bg-slate-200">
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80"
                   alt="Modern interior entryway with doors and windows"
@@ -161,11 +176,11 @@ function Services() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-6">
             {services.map((service) => (
               <article
                 key={service.id}
-                className="group bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-200 transition-all cursor-pointer"
+                className="group flex flex-col bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-200 transition-all cursor-pointer"
                 onClick={() => navigate(`/services/${service.slug}`)}
                 role="button"
                 tabIndex={0}
@@ -176,7 +191,7 @@ function Services() {
                   }
                 }}
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -194,19 +209,19 @@ function Services() {
                     </div>
                   </div>
                 </div>
-                <div className="p-4">
+                <div className="p-4 flex-1 flex flex-col">
                   <h2 className="text-lg font-medium text-slate-900 mb-1">{service.title}</h2>
                   <p className="text-teal-600 text-sm font-medium mb-3">
                     {service.products} Products
                   </p>
-                  <p className="text-slate-600 text-sm mb-4 line-clamp-2">{service.description}</p>
+                  <p className="text-slate-600 text-sm mb-4 line-clamp-3 flex-1">{service.description}</p>
                   <button
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation()
                       navigate(`/services/${service.slug}`)
                     }}
-                    className="inline-flex items-center gap-1.5 text-teal-600 text-sm font-medium hover:underline"
+                    className="mt-auto inline-flex items-center gap-1.5 text-teal-600 text-sm font-medium hover:underline"
                   >
                     View Details
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -137,7 +137,7 @@ function ServiceDetail() {
                       <h4 className="font-semibold text-slate-900">Key Features</h4>
                     </div>
                     <ul className="space-y-2">
-                      {service.keyFeatures.map((feature, idx) => (
+                      {(selectedProduct?.features || service.keyFeatures).map((feature, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-slate-700">
                           <svg className="w-5 h-5 text-teal-600 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -192,10 +192,10 @@ function ServiceDetail() {
             {service.products.map((product, index) => (
               <div
                 key={index}
-                className={`group bg-white rounded-lg border-2 overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer transform hover:scale-105 active:scale-95 ${
+                className={`group bg-white rounded-lg border-2 overflow-hidden shadow-sm transition-all cursor-pointer transform hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg duration-200 ${
                   selectedProduct?.name === product.name
                     ? 'border-teal-600 ring-2 ring-teal-200 shadow-lg'
-                    : 'border-slate-200 hover:border-teal-300'
+                    : 'border-slate-200 hover:border-teal-400'
                 }`}
                 onClick={() => handleProductClick(product)}
                 role="button"
@@ -208,11 +208,11 @@ function ServiceDetail() {
                 }}
                 aria-label={`Select ${product.name}`}
               >
-                <div className="aspect-square overflow-hidden bg-slate-100">
+                <div className="aspect-square overflow-hidden bg-slate-100 group-hover:bg-slate-200 transition-colors duration-200">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     loading="lazy"
                   />
                 </div>
@@ -238,7 +238,7 @@ function ServiceDetail() {
           <div className="flex justify-center">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 hover:shadow-lg active:scale-95 transition-all duration-200 cursor-pointer"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

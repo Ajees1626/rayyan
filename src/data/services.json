@@ -17,35 +17,35 @@
     {
       "id": 3,
       "title": "UPVC Interior",
-      "products": 8,
+      "products": 4,
       "description": "Elegant interior doors and partitions for modern homes and offices.",
       "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80"
     },
     {
       "id": 4,
       "title": "Wooden Doors",
-      "products": 8,
+      "products": 4,
       "description": "Classic and elegant wooden doors with premium finishes.",
       "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600&q=80"
     },
     {
       "id": 5,
       "title": "Wooden Frames",
-      "products": 8,
+      "products": 4,
       "description": "Premium wooden window and door frames for traditional and modern homes.",
       "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80"
     },
     {
       "id": 6,
       "title": "Interior Room Doors",
-      "products": 8,
+      "products": 6,
       "description": "Modern interior doors for bedrooms, bathrooms, and living spaces.",
       "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80"
     },
     {
       "id": 7,
       "title": "WPC Doors",
-      "products": 8,
+      "products": 4,
       "description": "Waterproof composite doors perfect for bathrooms and wet areas.",
       "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80"
     },

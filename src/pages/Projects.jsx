@@ -10,7 +10,7 @@ const projects = [
     category: 'RESIDENTIAL',
     categoryColor: 'bg-teal-600',
     image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80',
-    overlayText: 'Team Crete window replacement for 200+ units with soundproof UPVC sliding windows.',
+    
     about:
       'Complete window replacement for 200+ units with premium UPVC sliding windows designed for soundproofing and energy efficiency.',
     solution: 'UPVC Sliding Windows',
@@ -28,7 +28,7 @@ const projects = [
     category: 'RESIDENTIAL',
     categoryColor: 'bg-teal-600',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
-    overlayText: 'Custom-designed aluminium French doors and glass railings for a premium villa.',
+   
     about:
       'Modernisation of a government office facade with high-performance aluminium French doors, increasing natural light and security.',
     solution: 'Aluminium French Doors',
@@ -206,13 +206,13 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Buttons */}
-          <div className="flex gap-3 mb-10">
+          <div className="flex flex-wrap gap-3 mb-10">
             {filters.map((filter) => (
               <button
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`px-6 py-2.5 rounded-lg font-medium text-sm uppercase transition-colors ${
+                className={`px-6 py-2.5 rounded-lg font-medium text-sm uppercase transition-colors cursor-pointer ${
                   activeFilter === filter
                     ? 'bg-teal-600 text-white'
                     : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
@@ -241,14 +241,14 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
                   >
                     {project.category}
                   </span>
-                  {project.overlayText && (
-                    <div className="absolute inset-0 bg-slate-900/60 flex items-end p-4">
-                      <p className="text-white text-sm line-clamp-2">{project.overlayText}</p>
-                    </div>
-                  )}
                 </div>
                 <div className="p-5">
                   <h2 className="text-lg font-medium text-slate-900 mb-2">{project.title}</h2>
+                  {project.overlayText && (
+                    <p className="text-slate-600 text-sm mb-3 line-clamp-2">
+                      {project.overlayText}
+                    </p>
+                  )}
                   <div className="flex items-center gap-1.5 text-teal-600 text-sm mb-4">
                     <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -299,8 +299,8 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
 
             <div className="grid grid-cols-1 lg:grid-cols-2">
               {/* Left - Main image with slider controls */}
-              <div className="relative bg-slate-900">
-                <div className="aspect-[4/3] w-full overflow-hidden">
+              <div className="relative bg-teal-300 flex items-center justify-center p-4 lg:p-6">
+                <div className="w-full max-h-[520px] aspect-[4/3] overflow-hidden rounded-2xl lg:rounded-3xl">
                   <img
                     src={activeProject.gallery?.[activeImageIndex] || activeProject.image}
                     alt={activeProject.title}

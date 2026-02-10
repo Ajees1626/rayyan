@@ -5,7 +5,7 @@ const services = [
   {
     id: 1,
     title: 'UPVC Windows',
-    titleColor: 'text-slate-900',
+    titleColor: 'text-teal-600',
     description: 'Premium UPVC windows designed for Indian climate conditions. Energy-efficient, soundproof, and low maintenance.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@ const services = [
   {
     id: 4,
     title: 'Wooden Doors',
-    titleColor: 'text-slate-900',
+    titleColor: 'text-teal-600',
     description: 'Classic and elegant wooden doors with premium finishes for timeless appeal.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,6 +84,7 @@ const services = [
 
 function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
   const scrollRef = useRef(null)
 
   const scrollToIndex = (index) => {
@@ -119,6 +120,18 @@ function ServicesSection() {
     setActiveIndex(closestIndex)
   }
 
+  // Auto-slide between service cards
+  useEffect(() => {
+    if (isHovered) return
+
+    const timer = setTimeout(() => {
+      const nextIndex = (activeIndex + 1) % services.length
+      scrollToIndex(nextIndex)
+    }, 3000) // 5s per slide
+
+    return () => clearTimeout(timer)
+  }, [activeIndex, isHovered])
+
   return (
     <section className="py-16 lg:py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,6 +155,8 @@ function ServicesSection() {
         <div
           ref={scrollRef}
           onScroll={handleScroll}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
           className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
@@ -175,7 +190,7 @@ function ServicesSection() {
               {/* Learn More */}
               <Link
                 to="/services"
-                className={`inline-flex items-center gap-2 font-medium text-sm hover:underline ${service.learnMoreColor}`}
+                className="inline-flex items-center gap-2 font-medium text-sm text-teal-600 hover:text-amber-500 hover:underline transition-colors"
               >
                 Learn More
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

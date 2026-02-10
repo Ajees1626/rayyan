@@ -9,62 +9,86 @@
         {
           "name": "Sliding Windows",
           "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&q=80",
-          "price": "₹350",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance"]
         },
         {
           "name": "Casement Windows",
           "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80",
-          "price": "₹380",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance"]
         },
         {
           "name": "Tilt & Turn Windows",
           "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80",
-          "price": "₹420",
-          "priceUnit": "per sqft"
+          "price": "₹500*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "3-way Opening"]
         },
         {
           "name": "Fixed Windows",
           "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹300",
-          "priceUnit": "per sqft"
+          "price": "₹300*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Maximum Light"]
         },
         {
           "name": "Mosquito Sliding Window",
           "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
-          "price": "₹400",
-          "priceUnit": "per sqft"
+          "price": "₹250*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Ventilation Control"]
         },
         {
           "name": "Top Open Window",
           "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹360",
-          "priceUnit": "per sqft"
+          "price": "₹250*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Outward Opening"]
         },
         {
           "name": "L Corner Window",
           "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹450",
-          "priceUnit": "per sqft"
+          "price": "₹250*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Extended View"]
         },
         {
-          "name": "Bathroom Ventilator",
+          "name": "Bathroom ventilator",
           "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=400&q=80",
-          "price": "₹280",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Maximum Light"]
         },
         {
-          "name": "Three Track Slide Windows",
+          "name": "Three track slide windows",
           "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=80",
-          "price": "₹480",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Corner Design"]
+        },
+        {
+          "name": "French Windows",
+          "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Elegant Design"]
+        },
+        {
+          "name": "Bay Windows",
+          "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80",
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Extended View", "Elegant Design"]
         },
         {
           "name": "Arch Windows",
           "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹600",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Elegant Design", "Curved Design"]
         }
       ]
     },
@@ -72,67 +96,77 @@
       "title": "UPVC DOORS",
       "description": "Secure and stylish main entrance doors that make a strong first impression while ensuring safety.",
       "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80",
-      "keyFeatures": ["Secure", "Weather Resistant", "Energy Efficient", "Low Maintenance"],
+      "keyFeatures": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance"],
       "products": [
         {
           "name": "Sliding Door",
           "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹450",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance"]
         },
         {
           "name": "Folding Door",
           "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
-          "price": "₹500",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Wide Opening"]
         },
         {
-          "name": "French Door",
+          "name": "French Doors",
           "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹550",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Elegant Design"]
         },
         {
-          "name": "Bi-fold Door",
+          "name": "Bathroom Doors",
           "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80",
-          "price": "₹480",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Space Saving"]
         },
         {
-          "name": "Main Entrance Door",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹600",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Patio Door",
+          "name": "2 Track Sliding Door",
           "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹520",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Smooth Sliding"]
         },
         {
-          "name": "Balcony Door",
+          "name": "3 Track Sliding Door",
           "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
-          "price": "₹470",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Smooth Sliding"]
         },
         {
-          "name": "Double Door",
+          "name": "Double Open Door",
           "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80",
-          "price": "₹580",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Wide Opening"]
         },
         {
-          "name": "Single Door",
+          "name": "Partition Door",
           "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=80",
-          "price": "₹420",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Space Division"]
         },
         {
-          "name": "Panel Door",
+          "name": "Mortice Lock Door",
           "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹490",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Enhanced Security"]
+        },
+        {
+          "name": "Mesh Slide Door",
+          "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Ventilation Control"]
         }
       ]
     },
@@ -140,67 +174,35 @@
       "title": "UPVC INTERIOR",
       "description": "Elegant interior doors and partitions for modern homes and offices.",
       "heroImage": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=80",
-      "keyFeatures": ["Modern Design", "Durable", "Easy Maintenance", "Customizable"],
+      "keyFeatures": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"],
       "products": [
         {
           "name": "Modern Kitchen",
           "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
-          "price": "₹400",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"]
         },
         {
-          "name": "Loft Covering",
+          "name": "Loft covering",
           "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹380",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"]
         },
         {
-          "name": "Room Partition",
-          "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80",
-          "price": "₹350",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Wardrobe Door",
+          "name": "Wardrobe",
           "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹320",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"]
         },
         {
-          "name": "Cabinet Door",
+          "name": "TV Unit",
           "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
-          "price": "₹300",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Sliding Partition",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹420",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Folding Partition",
-          "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80",
-          "price": "₹450",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Glass Partition",
-          "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=80",
-          "price": "₹500",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Storage Door",
-          "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹280",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Panel Partition",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹360",
-          "priceUnit": "per sqft"
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"]
         }
       ]
     },
@@ -208,67 +210,35 @@
       "title": "WOODEN DOORS",
       "description": "Classic and elegant wooden doors with premium finishes.",
       "heroImage": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=900&q=80",
-      "keyFeatures": ["Premium Quality", "Classic Design", "Durable", "Natural Finish"],
+      "keyFeatures": ["Classic Design", "Durable", "Natural Look", "Customizable"],
       "products": [
         {
           "name": "Teak Wood Door",
           "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=400&q=80",
-          "price": "₹800",
-          "priceUnit": "per sqft"
+          "price": "₹5,800*",
+          "priceUnit": "per sqft",
+          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
           "name": "Vengai Wood Door",
           "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹700",
-          "priceUnit": "per sqft"
+          "price": "₹5,800*",
+          "priceUnit": "per sqft",
+          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
-          "name": "Rosewood Door",
+          "name": "Magakani Door",
           "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80",
-          "price": "₹900",
-          "priceUnit": "per sqft"
+          "price": "₹5,800*",
+          "priceUnit": "per sqft",
+          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
-          "name": "Hardwood Door",
+          "name": "Kongu Wood Door",
           "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹750",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Carved Wood Door",
-          "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
-          "price": "₹1000",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Panel Wood Door",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹650",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Solid Wood Door",
-          "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80",
-          "price": "₹850",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Laminated Wood Door",
-          "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=80",
-          "price": "₹720",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Engineered Wood Door",
-          "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹680",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Custom Wood Door",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹950",
-          "priceUnit": "per sqft"
+          "price": "₹5,800*",
+          "priceUnit": "per sqft",
+          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         }
       ]
     },
@@ -276,67 +246,35 @@
       "title": "WOODEN FRAMES",
       "description": "Premium wooden window and door frames for traditional and modern homes.",
       "heroImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80",
-      "keyFeatures": ["Premium Wood", "Traditional Design", "Weather Resistant", "Long Lasting"],
+      "keyFeatures": ["Classic Design", "Durable", "Natural Look", "Customizable"],
       "products": [
         {
           "name": "Teak Wood Frame",
           "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80",
-          "price": "₹600",
-          "priceUnit": "per sqft"
+          "price": "₹2,000*",
+          "priceUnit": "per sqft",
+          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
           "name": "Vengai Wood Frame",
           "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80",
-          "price": "₹550",
-          "priceUnit": "per sqft"
+          "price": "₹2,000*",
+          "priceUnit": "per sqft",
+          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
-          "name": "Hardwood Frame",
-          "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹580",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Rosewood Frame",
-          "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
-          "price": "₹650",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Window Frame",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹520",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Door Frame",
-          "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80",
-          "price": "₹570",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Custom Frame",
-          "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=80",
-          "price": "₹620",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Decorative Frame",
+          "name": "Magakani Frame",
           "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹680",
-          "priceUnit": "per sqft"
+          "price": "₹2,000*",
+          "priceUnit": "per sqft",
+          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
-          "name": "Standard Frame",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹500",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Premium Frame",
+          "name": "Kongu Wood Frame",
           "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹700",
-          "priceUnit": "per sqft"
+          "price": "₹2,000*",
+          "priceUnit": "per sqft",
+          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         }
       ]
     },
@@ -344,67 +282,49 @@
       "title": "INTERIOR ROOM DOORS",
       "description": "Modern interior doors for bedrooms, bathrooms, and living spaces.",
       "heroImage": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900&q=80",
-      "keyFeatures": ["Modern Design", "Lightweight", "Easy Installation", "Affordable"],
+      "keyFeatures": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"],
       "products": [
         {
           "name": "Lamination Door",
           "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹350",
-          "priceUnit": "per sqft"
+          "price": "₹2,000*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "Steel Beading Door",
           "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
-          "price": "₹400",
-          "priceUnit": "per sqft"
+          "price": "₹2,000*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
-          "name": "Bedroom Door",
-          "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80",
-          "price": "₹380",
-          "priceUnit": "per sqft"
+          "name": "Gold Beading Doors",
+          "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
+          "price": "₹2,000*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
-          "name": "Bathroom Door",
+          "name": "UV Doors",
           "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹320",
-          "priceUnit": "per sqft"
+          "price": "₹2,000*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
-          "name": "Living Room Door",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹420",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Sliding Room Door",
-          "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80",
-          "price": "₹450",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Folding Room Door",
-          "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=80",
-          "price": "₹480",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Panel Room Door",
-          "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹360",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Hollow Core Door",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹300",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Solid Core Door",
+          "name": "Premium UV Doors",
           "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹400",
-          "priceUnit": "per sqft"
+          "price": "₹2,000*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
+        },
+        {
+          "name": "Embossed Doors",
+          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
+          "price": "₹2,000*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
         }
       ]
     },
@@ -412,67 +332,35 @@
       "title": "WPC DOORS",
       "description": "Waterproof composite doors perfect for bathrooms and wet areas.",
       "heroImage": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80",
-      "keyFeatures": ["Waterproof", "Mold Resistant", "Durable", "Low Maintenance"],
+      "keyFeatures": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"],
       "products": [
         {
           "name": "Plain Door",
           "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
-          "price": "₹450",
-          "priceUnit": "per sqft"
+          "price": "₹5,000*",
+          "priceUnit": "per sqft",
+          "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         },
         {
           "name": "Carving Doors",
           "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹550",
-          "priceUnit": "per sqft"
+          "price": "₹5,000*",
+          "priceUnit": "per sqft",
+          "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         },
         {
-          "name": "Bathroom WPC Door",
-          "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80",
-          "price": "₹480",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Kitchen WPC Door",
-          "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹470",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Panel WPC Door",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹500",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Textured WPC Door",
-          "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80",
-          "price": "₹520",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Sliding WPC Door",
-          "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=80",
-          "price": "₹530",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Folding WPC Door",
+          "name": "Digital Carving Doors",
           "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹560",
-          "priceUnit": "per sqft"
+          "price": "₹5,000*",
+          "priceUnit": "per sqft",
+          "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         },
         {
-          "name": "Custom WPC Door",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹580",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Premium WPC Door",
+          "name": "Digital Print Doors",
           "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹600",
-          "priceUnit": "per sqft"
+          "price": "₹5,000*",
+          "priceUnit": "per sqft",
+          "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         }
       ]
     },
@@ -480,67 +368,28 @@
       "title": "SCREENS & BLINDS",
       "description": "Mosquito nets, window screens, and blinds for complete home solutions.",
       "heroImage": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=80",
-      "keyFeatures": ["Mosquito Protection", "Privacy Control", "Easy Installation", "Affordable"],
+      "keyFeatures": ["Mosquito Protection", "Privacy", "UV Protection", "Easy Installation"],
       "products": [
         {
           "name": "Zebra Screen",
           "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80",
-          "price": "₹200",
-          "priceUnit": "per sqft"
+          "price": "₹1,600*",
+          "priceUnit": "per sqft",
+          "features": ["Mosquito Protection", "Privacy", "UV Protection", "Easy Installation"]
         },
         {
           "name": "Mosquito Window Screen",
           "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80",
-          "price": "₹150",
-          "priceUnit": "per sqft"
+          "price": "₹1,600*",
+          "priceUnit": "per sqft",
+          "features": ["Mosquito Protection", "Privacy", "UV Protection", "Easy Installation"]
         },
         {
-          "name": "Roller Blinds",
-          "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹180",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Venetian Blinds",
-          "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
-          "price": "₹220",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Vertical Blinds",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹200",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Roman Blinds",
-          "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80",
-          "price": "₹250",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Honeycomb Blinds",
-          "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=80",
-          "price": "₹280",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Pleated Blinds",
+          "name": "Mosquito Door Sliding",
           "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80",
-          "price": "₹240",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Motorized Blinds",
-          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-          "price": "₹350",
-          "priceUnit": "per sqft"
-        },
-        {
-          "name": "Blackout Blinds",
-          "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80",
-          "price": "₹270",
-          "priceUnit": "per sqft"
+          "price": "₹1,600*",
+          "priceUnit": "per sqft",
+          "features": ["Mosquito Protection", "Privacy", "UV Protection", "Easy Installation"]
         }
       ]
     }
