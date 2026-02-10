@@ -13,7 +13,10 @@ CORS(app, origins=[
     'http://127.0.0.1:5173',
     'http://localhost:3000',
     'http://192.168.1.3:5173',
-    'http://192.168.1.3:3000'
+    'http://192.168.1.3:3000',
+    'https://rayyan-2.onrender.com',
+    'https://rayyan.onrender.com',
+    'https://rayyan-1.onrender.com',
 ])
 
 # SMTP Config from env
