@@ -52,7 +52,7 @@ Sent from Rayyan Windows Contact Form
     msg['Subject'] = f"New Enquiry: {data.get('name', '')} - {data.get('city', '')}"
     msg.attach(MIMEText(body.strip(), 'plain', 'utf-8'))
 
-    with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
+    with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=20) as server:
         server.starttls()
         server.login(SMTP_USER, SMTP_PASS)
         server.sendmail(SMTP_USER, MAIL_TO, msg.as_string())
@@ -87,7 +87,7 @@ Tenkasi
     msg['Subject'] = "Thank you for your enquiry - Rayyan Windows & Doors"
     msg.attach(MIMEText(body.strip(), 'plain', 'utf-8'))
 
-    with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
+    with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=20) as server:
         server.starttls()
         server.login(SMTP_USER, SMTP_PASS)
         server.sendmail(SMTP_USER, client_email, msg.as_string())
