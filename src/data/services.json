@@ -5,56 +5,56 @@
       "title": "UPVC Windows",
       "products": 12,
       "description": "Premium UPVC windows designed for Indian climate conditions. Energy-efficient, soundproof, and low maintenance.",
-      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+      "image": "/image/home.webp"
     },
     {
       "id": 2,
       "title": "UPVC Doors",
       "products": 10,
       "description": "Secure and stylish main entrance doors that make a strong first impression while ensuring safety.",
-      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80"
+      "image": "/image/home.webp"
     },
     {
       "id": 3,
       "title": "UPVC Interior",
       "products": 4,
       "description": "Elegant interior doors and partitions for modern homes and offices.",
-      "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80"
+      "image": "/image/home.webp"
     },
     {
       "id": 4,
       "title": "Wooden Doors",
       "products": 4,
       "description": "Classic and elegant wooden doors with premium finishes.",
-      "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600&q=80"
+      "image": "/image/Wooden Doors.webp"
     },
     {
       "id": 5,
       "title": "Wooden Frames",
       "products": 4,
       "description": "Premium wooden window and door frames for traditional and modern homes.",
-      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80"
+      "image": "/image/Wooden Frames.webp"
     },
     {
       "id": 6,
       "title": "Interior Room Doors",
       "products": 6,
       "description": "Modern interior doors for bedrooms, bathrooms, and living spaces.",
-      "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80"
+      "image": "/image/Room Doors.webp"
     },
     {
       "id": 7,
       "title": "WPC Doors",
       "products": 4,
       "description": "Waterproof composite doors perfect for bathrooms and wet areas.",
-      "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80"
+      "image": "/image/WPC Doors.webp"
     },
     {
       "id": 8,
       "title": "Screens & Blinds",
       "products": 3,
       "description": "Mosquito nets, window screens, and blinds for complete home solutions.",
-      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80"
+      "image": "/image/home.webp"
     }
   ]
 }

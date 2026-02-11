@@ -70,7 +70,7 @@ function ServicesCardDropdown({ isOpen, onClose }) {
         className="p-4 bg-white rounded-xl shadow-lg border border-teal-200"
         onMouseLeave={onClose}
       >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
           {servicesItems.map((item, idx) => {
             const slug = serviceSlugMap[item.label]
             const detailPath = slug ? `/services/${slug}` : '/services'
@@ -79,7 +79,7 @@ function ServicesCardDropdown({ isOpen, onClose }) {
               <div
                 key={`${item.label}-${idx}`}
                 ref={setCardRef(idx)}
-                className="flex flex-col gap-2 p-4 rounded-lg min-h-[140px]"
+                className="flex flex-col gap-2 p-3 sm:p-4 rounded-lg min-h-[120px] sm:min-h-[140px]"
                 style={{ backgroundColor: item.bgColor, color: '#fff' }}
               >
                 <div className="font-semibold tracking-tight text-base">

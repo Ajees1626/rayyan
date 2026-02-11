@@ -23,26 +23,16 @@ function Footer() {
 
   return (
     <footer className="bg-white text-slate-800 mt-auto border-t border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <div className="flex items-center gap-3">
-                <svg className="w-10 h-10 shrink-0" viewBox="0 0 40 40" fill="none">
-                  <path d="M20 4L4 14v12h8v-8h4v8h8V14L20 4z" fill="#0d9488" />
-                  <path d="M20 4l4 4-4 2-4-2 4-4z" fill="#f59e0b" stroke="#92400e" strokeWidth="0.5" />
-                </svg>
-                <div>
-                  <span
-                    className="font-script text-xl font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
-                  >
-                    Rayyan
-                  </span>
-                  <p className="text-xs text-slate-600 font-medium">WINDOWS</p>
-                  <p className="text-[10px] text-slate-500">UPVC WINDOW AND DOORS</p>
-                </div>
-              </div>
+              <img
+                src="/image/logo.png"
+                alt="Rayyan Windows - UPVC Windows and Doors"
+                className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm text-slate-600 leading-relaxed">
               Premium windows and doors solutions for Indian homes and commercial spaces.
@@ -115,7 +105,7 @@ function Footer() {
 
         {/* Separator & Bottom */}
         <div className="mt-12 pt-8 border-t-2 border-teal-600">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
             <p className="text-sm text-slate-600">
               © {currentYear} Rayyan Window. All rights reserved.
             </p>

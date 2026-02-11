@@ -1,4 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
+import ScrollReveal from '../components/ScrollReveal'
 import servicesData from '../data/services.json'
 
 const iconMap = {
@@ -103,9 +104,10 @@ function Services() {
   return (
     <div className="bg-slate-50">
       {/* Hero Section */}
-      <section className="py-10 sm:py-12 lg:py-20">
+      <section className="py-8 sm:py-10 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <ScrollReveal direction="up" duration={0.6}>
             {/* Left - Heading & Buttons */}
             <div 
               onClick={() => navigate('/projects')}
@@ -119,7 +121,7 @@ function Services() {
                 }
               }}
             >
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium uppercase leading-tight mb-6 sm:mb-8">
+              <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium uppercase leading-tight mb-6 sm:mb-8">
                 <span className="block text-slate-900">COMPLETE</span>
                 <span className="block text-teal-600">WINDOWS & DOORS</span>
                 <span className="block text-slate-900">SOLUTIONS</span>
@@ -143,18 +145,20 @@ function Services() {
                 </Link>
               </div>
             </div>
-
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.1} duration={0.6}>
             {/* Right - Image */}
             <div className="relative max-w-xl w-full mx-auto lg:mx-0">
               <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[16/10] bg-slate-200">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80"
+                  src="/image/home.webp"
                   alt="Modern interior entryway with doors and windows"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -162,6 +166,7 @@ function Services() {
       {/* Services Grid - 8 cards */}
       <section className="py-8 lg:py-16 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal direction="up" duration={0.6}>
           {/* Section Header */}
           <div className="text-center mb-10">
             <span className="inline-block px-4 py-1.5 bg-teal-100 text-slate-800 text-xs font-medium uppercase tracking-wider rounded-full mb-4">
@@ -176,7 +181,7 @@ function Services() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
             {services.map((service) => (
               <article
                 key={service.id}
@@ -232,9 +237,11 @@ function Services() {
               </article>
             ))}
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
+      <ScrollReveal direction="up" duration={0.6}>
       {/* Additional Services */}
       <section className="py-16 lg:py-20 bg-amber-50/40">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -272,7 +279,9 @@ function Services() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal direction="up" duration={0.6}>
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-teal-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -290,6 +299,7 @@ function Services() {
           </Link>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   )
 }

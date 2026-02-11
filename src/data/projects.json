@@ -14,8 +14,14 @@
       "service": "UPVC Sliding Windows",
       "category": "RESIDENTIAL",
       "categoryColor": "bg-teal-600",
-      "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80",
-      "overlayText": "Team Crete window replacement for 200+ units with soundproof UPVC sliding windows."
+      "image": "/image/Projects.webp",
+      "about": "Complete window replacement for 200+ units with premium UPVC sliding windows designed for soundproofing and energy efficiency.",
+      "solution": "UPVC Sliding Windows",
+      "gallery": [
+        "/image/Projects.webp",
+        "/image/Projects.webp",
+        "/image/home.webp"
+      ]
     },
     {
       "id": 2,
@@ -24,8 +30,14 @@
       "service": "Aluminium French Doors",
       "category": "RESIDENTIAL",
       "categoryColor": "bg-teal-600",
-      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-      "overlayText": "Custom-designed aluminium French doors and glass railings for a premium villa."
+      "image": "/image/home.webp",
+      "about": "Modernisation of a government office facade with high-performance aluminium French doors, increasing natural light and security.",
+      "solution": "Aluminium French Doors",
+      "gallery": [
+        "/image/home.webp",
+        "/image/Projects.webp",
+        "/image/home.webp"
+      ]
     },
     {
       "id": 3,
@@ -34,8 +46,14 @@
       "service": "Glass Façade System",
       "category": "COMMERCIAL",
       "categoryColor": "bg-teal-700",
-      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80",
-      "overlayText": null
+      "image": "/image/home.webp",
+      "about": "Glass façade system for a commercial complex, blending contemporary aesthetics with thermal and acoustic performance.",
+      "solution": "Glass Façade System",
+      "gallery": [
+        "/image/home.webp",
+        "/image/Wooden Frames.webp",
+        "/image/home.webp"
+      ]
     },
     {
       "id": 4,
@@ -44,8 +62,14 @@
       "service": "UPVC Casement Windows",
       "category": "RESIDENTIAL",
       "categoryColor": "bg-teal-600",
-      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
-      "overlayText": null
+      "image": "/image/Wooden Frames.webp",
+      "about": "UPVC casement windows installed for a premium independent house, enhancing ventilation and insulation.",
+      "solution": "UPVC Casement Windows",
+      "gallery": [
+        "/image/Wooden Frames.webp",
+        "/image/home.webp",
+        "/image/Projects.webp"
+      ]
     },
     {
       "id": 5,
@@ -54,8 +78,14 @@
       "service": "Balcony Sliding Doors",
       "category": "RESIDENTIAL",
       "categoryColor": "bg-teal-600",
-      "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80",
-      "overlayText": null
+      "image": "/image/Projects.webp",
+      "about": "Balcony sliding doors for a multi-storey residence, connecting indoor living spaces with outdoor views.",
+      "solution": "Balcony Sliding Doors",
+      "gallery": [
+        "/image/Projects.webp",
+        "/image/home.webp",
+        "/image/home.webp"
+      ]
     },
     {
       "id": 6,
@@ -64,8 +94,14 @@
       "service": "Structural Glazing",
       "category": "COMMERCIAL",
       "categoryColor": "bg-teal-700",
-      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-      "overlayText": null
+      "image": "/image/home.webp",
+      "about": "High-rise structural glazing project delivering a sleek, modern exterior with optimised daylight and performance.",
+      "solution": "Structural Glazing",
+      "gallery": [
+        "/image/home.webp",
+        "/image/home.webp",
+        "/image/Wooden Frames.webp"
+      ]
     }
   ]
 }

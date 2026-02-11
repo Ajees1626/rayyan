@@ -1,118 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import ScrollReveal from '../components/ScrollReveal'
+import projectsData from '../data/projects.json'
 
-const projects = [
-  {
-    id: 1,
-    title: 'Resort',
-    location: 'Tenkasi, Old Cuttralam',
-    service: 'UPVC Sliding Windows',
-    category: 'RESIDENTIAL',
-    categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80',
-    
-    about:
-      'Complete window replacement for 200+ units with premium UPVC sliding windows designed for soundproofing and energy efficiency.',
-    solution: 'UPVC Sliding Windows',
-    gallery: [
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80',
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80',
-    ],
-  },
-  {
-    id: 2,
-    title: 'Collector Office',
-    location: 'Tirunelveli',
-    service: 'Aluminium French Doors',
-    category: 'RESIDENTIAL',
-    categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
-   
-    about:
-      'Modernisation of a government office facade with high-performance aluminium French doors, increasing natural light and security.',
-    solution: 'Aluminium French Doors',
-    gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80',
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=80',
-    ],
-  },
-  {
-    id: 3,
-    title: 'Windows and Doors',
-    location: 'Surandai',
-    service: 'Glass Façade System',
-    category: 'COMMERCIAL',
-    categoryColor: 'bg-teal-700',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80',
-    overlayText: null,
-    about:
-      'Glass façade system for a commercial complex, blending contemporary aesthetics with thermal and acoustic performance.',
-    solution: 'Glass Façade System',
-    gallery: [
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
-    ],
-  },
-  {
-    id: 4,
-    title: 'Windows and Doors',
-    location: 'Melagaram',
-    service: 'UPVC Casement Windows',
-    category: 'RESIDENTIAL',
-    categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80',
-    overlayText: null,
-    about:
-      'UPVC casement windows installed for a premium independent house, enhancing ventilation and insulation.',
-    solution: 'UPVC Casement Windows',
-    gallery: [
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80',
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80',
-    ],
-  },
-  {
-    id: 5,
-    title: 'Windows and Doors',
-    location: 'Tenkasi',
-    service: 'Balcony Sliding Doors',
-    category: 'RESIDENTIAL',
-    categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80',
-    overlayText: null,
-    about:
-      'Balcony sliding doors for a multi-storey residence, connecting indoor living spaces with outdoor views.',
-    solution: 'Balcony Sliding Doors',
-    gallery: [
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=80',
-    ],
-  },
-  {
-    id: 6,
-    title: 'Windows and Doors',
-    location: 'Agara kattu',
-    service: 'Structural Glazing',
-    category: 'COMMERCIAL',
-    categoryColor: 'bg-teal-700',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
-    overlayText: null,
-    about:
-      'High-rise structural glazing project delivering a sleek, modern exterior with optimised daylight and performance.',
-    solution: 'Structural Glazing',
-    gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80',
-    ],
-  },
-]
-
-const filters = ['ALL', 'RESIDENTIAL', 'COMMERCIAL']
+const { projects, filters } = projectsData
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('ALL')
@@ -161,13 +52,14 @@ function Projects() {
   return (
     <div className="bg-slate-50">
       {/* Hero Section - Recent Indian Projects */}
-      <section className="py-12 lg:py-20">
+      <section className="py-10 sm:py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal direction="up" duration={0.6}>
             {/* Left - Heading & Buttons */}
             <div>
               <h1
-className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-8"
+className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium uppercase mb-6 sm:mb-8"
               >
                 <span className="block text-slate-900">RECENT</span>
                 <span className="block text-teal-600">INDIAN PROJECTS</span>
@@ -187,32 +79,35 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
                 </Link>
               </div>
             </div>
-
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.1} duration={0.6}>
             {/* Right - Image */}
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] lg:aspect-[5/4]">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                  src="/image/Projects.webp"
                   alt="Elegant interior with double doors"
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
+      <ScrollReveal direction="up" duration={0.6}>
       {/* Projects Grid */}
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Buttons */}
-          <div className="flex flex-wrap gap-3 mb-10">
+          <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
             {filters.map((filter) => (
               <button
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`px-6 py-2.5 rounded-lg font-medium text-sm uppercase transition-colors cursor-pointer ${
+                className={`px-4 sm:px-6 py-2.5 rounded-lg font-medium text-sm uppercase transition-colors cursor-pointer min-h-[44px] flex items-center ${
                   activeFilter === filter
                     ? 'bg-teal-600 text-white'
                     : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
@@ -230,7 +125,7 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
                 className="group bg-white rounded-xl border border-teal-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer"
                 onClick={() => openProjectModal(project)}
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden group">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -244,11 +139,6 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
                 </div>
                 <div className="p-5">
                   <h2 className="text-lg font-medium text-slate-900 mb-2">{project.title}</h2>
-                  {project.overlayText && (
-                    <p className="text-slate-600 text-sm mb-3 line-clamp-2">
-                      {project.overlayText}
-                    </p>
-                  )}
                   <div className="flex items-center gap-1.5 text-teal-600 text-sm mb-4">
                     <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -280,11 +170,12 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Project Detail Modal */}
       {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm px-4">
-          <div className="relative w-full max-w-6xl bg-white rounded-3xl overflow-hidden shadow-2xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-3 sm:p-4 overflow-y-auto">
+          <div className="relative w-full max-w-6xl bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl my-4 max-h-[calc(100vh-2rem)] overflow-y-auto">
             {/* Close button */}
             <button
               type="button"
@@ -373,7 +264,7 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
                         About This Project
                       </h3>
                       <p className="text-sm text-slate-700 leading-relaxed">
-                        {activeProject.about || activeProject.overlayText}
+                        {activeProject.about}
                       </p>
                     </div>
 
@@ -452,7 +343,7 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
       {/* Stats Section */}
       <section className="py-16 lg:py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               { value: '1500+', label: 'Projects Completed' },
               { value: '10+', label: 'Years Experience' },
@@ -461,9 +352,9 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="bg-amber-50/80 rounded-xl p-8 text-center"
+                className="bg-amber-50/80 rounded-xl p-5 sm:p-6 lg:p-8 text-center"
               >
-                <p className="text-3xl sm:text-4xl font-semibold text-teal-600 mb-2">{stat.value}</p>
+                <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-teal-600 mb-2">{stat.value}</p>
                 <p className="text-slate-800 font-medium text-sm">{stat.label}</p>
               </div>
             ))}
@@ -472,10 +363,10 @@ className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase mb-
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
-className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-slate-900 uppercase mb-6"
+className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 uppercase mb-6"
           >
             Ready to start your
             <br />

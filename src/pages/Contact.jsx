@@ -1,40 +1,89 @@
+import { useState } from 'react'
+import ScrollReveal from '../components/ScrollReveal'
+
+const API_URL = import.meta.env.VITE_API_URL || 'https://rayyan-2.onrender.com/api'
+
 function Contact() {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    mobile: '',
+    city: '',
+    projectType: '',
+    windowsDoors: '',
+    additionalInfo: '',
+  })
+  const [loading, setLoading] = useState(false)
+  const [message, setMessage] = useState({ type: '', text: '' })
+
+  const handleChange = (e) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setMessage({ type: '', text: '' })
+    setLoading(true)
+    try {
+      const res = await fetch(`${API_URL}/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setMessage({ type: 'success', text: data.message })
+        setForm({ name: '', email: '', mobile: '', city: '', projectType: '', windowsDoors: '', additionalInfo: '' })
+      } else {
+        setMessage({ type: 'error', text: data.message || 'Something went wrong.' })
+      }
+    } catch (err) {
+      setMessage({ type: 'error', text: 'Could not submit. Please try again or contact us directly.' })
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-12 lg:py-20 bg-slate-50">
+      <section className="py-10 sm:py-12 lg:py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal direction="up" duration={0.6}>
             {/* Left - Headline */}
             <div>
               <h1
-                className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase leading-tight mb-6"
+                className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium uppercase leading-tight mb-6"
               >
                 <span className="block text-slate-900">SHARE YOUR</span>
-                <span className="block text-teal-600 text-5xl sm:text-6xl lg:text-7xl">PROJECT</span>
-                <span className="block text-teal-600 text-5xl sm:text-6xl lg:text-7xl">DETAILS</span>
+                <span className="block text-teal-600 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">PROJECT</span>
+                <span className="block text-teal-600 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">DETAILS</span>
               </h1>
               <p className="text-slate-700 text-lg">
                 Get a customised quotation with recommended profiles, glass types and hardware options. No obligation, no hard selling.
               </p>
             </div>
-
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.1} duration={0.6}>
             {/* Right - Image */}
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                  src="/image/Contact.webp"
                   alt="Interior with windows and natural light"
                   className="w-full aspect-[4/3] lg:aspect-[5/4] object-cover grayscale"
                 />
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
+      <ScrollReveal direction="up" duration={0.6}>
       {/* Contact Information & Quick Enquiry */}
-      <section className="py-16 lg:py-24 bg-slate-50">
+      <section className="py-12 sm:py-16 lg:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left - Contact Information */}
@@ -110,7 +159,7 @@ function Contact() {
 
             {/* Right - Quick Enquiry Form */}
             <div>
-              <div className="bg-white rounded-2xl shadow-lg border border-teal-200 p-8">
+              <div className="bg-white rounded-2xl shadow-lg border border-teal-200 p-5 sm:p-6 lg:p-8">
                 <span className="inline-block px-4 py-1.5 bg-teal-100 text-slate-800 text-xs font-semibold uppercase tracking-wider rounded-full mb-4">
                   QUICK ENQUIRY
                 </span>
@@ -118,7 +167,12 @@ function Contact() {
                   Fill this form and our team will call you within 24 hours.
                 </h3>
 
-                <form className="space-y-5">
+                <form className="space-y-5" onSubmit={handleSubmit}>
+                  {message.text && (
+                    <div className={`p-4 rounded-lg ${message.type === 'success' ? 'bg-teal-50 text-teal-800 border border-teal-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
+                      {message.text}
+                    </div>
+                  )}
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">Name *</label>
                     <input
@@ -126,8 +180,24 @@ function Contact() {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                      value={form.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2.5 text-base border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
                       placeholder="Your full name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">Email (Gmail) *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={form.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2.5 text-base border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                      placeholder="your.email@gmail.com"
                     />
                   </div>
 
@@ -141,6 +211,8 @@ function Contact() {
                           id="mobile"
                           name="mobile"
                           required
+                          value={form.mobile}
+                          onChange={handleChange}
                           className="flex-1 px-4 py-2.5 border border-slate-300 rounded-r-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
                           placeholder=""
                         />
@@ -153,7 +225,9 @@ function Contact() {
                         id="city"
                         name="city"
                         required
-                        className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                        value={form.city}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 text-base border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
                         placeholder="Eg. Mumbai"
                       />
                     </div>
@@ -165,6 +239,8 @@ function Contact() {
                       id="projectType"
                       name="projectType"
                       required
+                      value={form.projectType}
+                      onChange={handleChange}
                       className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none bg-white"
                     >
                       <option value="">Select option</option>
@@ -180,7 +256,9 @@ function Contact() {
                       type="text"
                       id="windowsDoors"
                       name="windowsDoors"
-                      className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                      value={form.windowsDoors}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2.5 text-base border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
                       placeholder="Eg. 8 / 3"
                     />
                   </div>
@@ -191,6 +269,8 @@ function Contact() {
                       id="additionalInfo"
                       name="additionalInfo"
                       rows="4"
+                      value={form.additionalInfo}
+                      onChange={handleChange}
                       className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none resize-none"
                       placeholder="Share any specific details or project challenges..."
                     />
@@ -198,9 +278,10 @@ function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 px-6 bg-teal-600 text-white font-medium uppercase rounded-lg hover:bg-teal-700 transition-colors"
+                    disabled={loading}
+                    className="w-full py-3.5 px-6 bg-teal-600 text-white font-medium uppercase rounded-lg hover:bg-teal-700 disabled:opacity-70 disabled:cursor-not-allowed transition-colors"
                   >
-                    Submit Enquiry
+                    {loading ? 'Submitting...' : 'Submit Enquiry'}
                   </button>
 
                   <p className="text-xs text-slate-500 text-center">
@@ -212,9 +293,11 @@ function Contact() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal direction="up" duration={0.6}>
       {/* Visit Our Showroom */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border-2 border-teal-200 overflow-hidden bg-white">
             <div className="p-8 lg:p-10">
@@ -234,7 +317,7 @@ function Contact() {
                 TENKASI - 627811
               </p>
 
-              <div className="rounded-xl overflow-hidden border border-slate-200 aspect-video">
+              <div className="rounded-xl overflow-hidden border border-slate-200 aspect-video min-h-[220px] sm:min-h-[300px]">
                 <iframe
                   title="Rayyan Windows Showroom - Tenkasi"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.65!2d77.31!3d8.96!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04284a1b2c3d4e%3A0x5e0!2sTenkasi%2C%20Tamil%20Nadu%20627811!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -251,6 +334,7 @@ function Contact() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   )
 }

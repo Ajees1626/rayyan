@@ -1,74 +1,47 @@
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import projectsData from '../data/projects.json'
 
-const projects = [
-  {
-    id: 1,
-    title: 'Resort',
-    location: 'Tenkasi, Old Cuttralam',
-    service: 'UPVC Sliding Windows',
-    category: 'RESIDENTIAL',
-    categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80',
-    overlayText: 'Team Crete window replacement for 200+ units with soundproof UPVC sliding windows.',
-  },
-  {
-    id: 2,
-    title: 'Collector Office',
-    location: 'Tirunelveli',
-    service: 'Aluminium French Doors',
-    category: 'RESIDENTIAL',
-    categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80',
-    overlayText: 'Custom-designed aluminium French doors and glass railings for a premium villa.',
-  },
-  {
-    id: 3,
-    title: 'Windows and Doors',
-    location: 'Surandai',
-    service: 'Glass Façade System',
-    category: 'COMMERCIAL',
-    categoryColor: 'bg-teal-700',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80',
-    overlayText: null,
-  },
-  {
-    id: 4,
-    title: 'Windows and Doors',
-    location: 'Melagaram',
-    service: 'UPVC Casement Windows',
-    category: 'RESIDENTIAL',
-    categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80',
-    overlayText: null,
-  },
-  {
-    id: 5,
-    title: 'Windows and Doors',
-    location: 'Tenkasi',
-    service: 'Balcony Sliding Doors',
-    category: 'RESIDENTIAL',
-    categoryColor: 'bg-teal-600',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80',
-    overlayText: null,
-  },
-  {
-    id: 6,
-    title: 'Windows and Doors',
-    location: 'Agara kattu',
-    service: 'Structural Glazing',
-    category: 'COMMERCIAL',
-    categoryColor: 'bg-teal-700',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80',
-    overlayText: null,
-  },
-]
+gsap.registerPlugin(ScrollTrigger)
+const { projects } = projectsData
 
 function FeaturedProjects() {
+  const headerRef = useRef(null)
+  const gridRef = useRef(null)
+
+  useEffect(() => {
+    const header = headerRef.current
+    const grid = gridRef.current
+    if (!header || !grid) return
+
+    gsap.fromTo(header, { opacity: 0, y: 50 }, {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: header, start: 'top 85%', toggleActions: 'play none none none' },
+    })
+
+    const cards = grid.querySelectorAll('article')
+    gsap.fromTo(cards, { opacity: 0, y: 60 }, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      stagger: 0.1,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: grid, start: 'top 88%', toggleActions: 'play none none none' },
+    })
+
+    return () => ScrollTrigger.getAll().forEach((t) => t.kill())
+  }, [])
+
   return (
-    <section className="py-16 lg:py-24 bg-amber-50/50">
+    <section className="py-12 sm:py-16 lg:py-24 bg-amber-50/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div ref={headerRef} className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-900 text-xs font-semibold uppercase tracking-wider rounded mb-4">
             FEATURED PROJECTS
           </span>
@@ -84,31 +57,25 @@ function FeaturedProjects() {
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {projects.map((project) => (
             <article
               key={project.id}
-              className="group bg-white rounded-xl border border-teal-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              className="group bg-white rounded-xl border border-teal-100 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-200 transition-all duration-300"
             >
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
                 />
-                {/* Category tag */}
+                {/* Category tag - pulse animation */}
                 <span
-                  className={`absolute top-3 right-3 px-3 py-1 ${project.categoryColor} text-white text-xs font-semibold uppercase rounded`}
+                  className={`absolute top-3 right-3 px-3 py-1 ${project.categoryColor} text-white text-xs font-semibold uppercase rounded animate-pulse-subtle`}
                 >
                   {project.category}
                 </span>
-                {/* Overlay text (when present) */}
-                {project.overlayText && (
-                  <div className="absolute inset-0 bg-slate-900/60 flex items-end p-4">
-                    <p className="text-white text-sm line-clamp-2">{project.overlayText}</p>
-                  </div>
-                )}
               </div>
 
               {/* Content */}
@@ -124,7 +91,7 @@ function FeaturedProjects() {
                 <p className="text-teal-700 font-medium text-sm mb-4">{project.service}</p>
                 <Link
                   to="/projects"
-                  className="inline-flex items-center gap-2 px-4 py-2 border border-teal-500 bg-white text-teal-600 text-sm font-medium rounded-lg hover:bg-teal-50 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 border border-teal-500 bg-white text-teal-600 text-sm font-medium rounded-lg hover:bg-teal-50 hover:border-teal-600 transition-all duration-300"
                 >
                   View Details
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom'
+import ScrollReveal from '../components/ScrollReveal'
 
 function About() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-12 lg:py-20 bg-amber-50/50">
+      <section className="py-10 sm:py-12 lg:py-20 bg-amber-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal direction="up" duration={0.6}>
             {/* Left - Headline & Buttons */}
             <div>
               <h1
-                className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase leading-tight mb-8"
+                className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium uppercase leading-tight mb-6 sm:mb-8"
               >
                 <span className="block text-slate-900">BUILDING</span>
                 <span className="block text-slate-900">TRUST, ONE </span>
@@ -32,21 +34,24 @@ function About() {
                 </Link>
               </div>
             </div>
-
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.1} duration={0.6}>
             {/* Right - Image */}
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                  src="/image/about.webp"
                   alt="Modern interior with large windows"
                   className="w-full aspect-[4/3] lg:aspect-[5/4] object-cover"
                 />
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
+      <ScrollReveal direction="up" duration={0.6}>
       {/* Our Story Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +60,7 @@ function About() {
             <div className="order-2 lg:order-1 flex justify-center">
               <div className="w-full max-w-xs sm:max-w-sm lg:max-w-md rounded-2xl overflow-hidden shadow-lg border-2 border-teal-600">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
+                  src="/image/Our Story.webp"
                   alt="Professional team"
                   className="w-full aspect-[4/5] object-cover object-top"
                 />
@@ -81,11 +86,11 @@ function About() {
               </p>
               {/* Stat boxes */}
               <div className="flex flex-wrap gap-4">
-                <div className="flex-1 min-w-[140px] bg-teal-600 rounded-xl p-6 text-white">
+                <div className="flex-1 min-w-[120px] sm:min-w-[140px] bg-teal-600 rounded-xl p-4 sm:p-6 text-white">
                   <p className="text-3xl font-semibold">10+</p>
                   <p className="text-sm mt-1">Years Experience</p>
                 </div>
-                <div className="flex-1 min-w-[140px] bg-amber-500 rounded-xl p-6 text-white">
+                <div className="flex-1 min-w-[120px] sm:min-w-[140px] bg-amber-500 rounded-xl p-4 sm:p-6 text-white">
                   <p className="text-3xl font-semibold">1500+</p>
                   <p className="text-sm mt-1">Happy Customers</p>
                 </div>
@@ -94,7 +99,9 @@ function About() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal direction="up" duration={0.6}>
       {/* Our Core Values */}
       <section className="py-16 lg:py-24 bg-teal-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,7 +120,7 @@ function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Quality First */}
             <div className="bg-white rounded-xl border-2 border-teal-200 p-8">
               <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mb-6">
@@ -155,7 +162,9 @@ function About() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal direction="up" duration={0.6}>
       {/* Why Choose Rayyan Window */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,7 +180,7 @@ function About() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               { title: 'In-House Manufacturing', desc: 'Complete control over quality and timelines' },
               { title: 'Expert Team', desc: 'Experienced engineers and installation specialists' },
@@ -189,7 +198,9 @@ function About() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal direction="up" duration={0.6}>
       {/* Our Process */}
       <section className="py-16 lg:py-24 bg-amber-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -208,7 +219,7 @@ function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 num: '01',
@@ -247,7 +258,9 @@ function About() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal direction="up" duration={0.6}>
       {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-teal-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -267,6 +280,7 @@ function About() {
           </Link>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   )
 }

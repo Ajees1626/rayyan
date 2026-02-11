@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { gsap } from 'gsap'
+import ScrollReveal from '../components/ScrollReveal'
 import serviceDetailsData from '../data/serviceDetails.json'
 
 // Get service data from JSON
@@ -95,7 +96,7 @@ function ServiceDetail() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section ref={heroRef} id="hero-section" className="py-12 lg:py-20 bg-white">
+      <section ref={heroRef} id="hero-section" className="py-10 sm:py-12 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left - Text Content */}
@@ -103,7 +104,7 @@ function ServiceDetail() {
               <div>
                 <h1
                   ref={titleRef}
-                  className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium uppercase leading-tight text-slate-900"
+                  className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium uppercase leading-tight text-slate-900"
                 >
                   {selectedProduct
                     ? selectedProduct.name.split(' ').map((word, i) => (
@@ -183,19 +184,20 @@ function ServiceDetail() {
       </section>
 
       {/* Product Selection Grid */}
-      <section className="py-12 lg:py-16 bg-white">
+      <section className="py-10 sm:py-12 lg:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-medium text-slate-900 mb-8 text-center">
+          <ScrollReveal direction="up" duration={0.6}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-medium text-slate-900 mb-6 sm:mb-8 text-center">
             Select Product:
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
             {service.products.map((product, index) => (
               <div
                 key={index}
-                className={`group bg-white rounded-lg border-2 overflow-hidden shadow-sm transition-all cursor-pointer transform hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg duration-200 ${
+                className={`group bg-white rounded-lg border-2 overflow-hidden shadow-sm transition-all cursor-pointer transform hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg hover:border-teal-400 duration-200 ${
                   selectedProduct?.name === product.name
                     ? 'border-teal-600 ring-2 ring-teal-200 shadow-lg'
-                    : 'border-slate-200 hover:border-teal-400'
+                    : 'border-slate-200'
                 }`}
                 onClick={() => handleProductClick(product)}
                 role="button"
@@ -208,25 +210,25 @@ function ServiceDetail() {
                 }}
                 aria-label={`Select ${product.name}`}
               >
-                <div className="aspect-square overflow-hidden bg-slate-100 group-hover:bg-slate-200 transition-colors duration-200">
+                <div className="aspect-square overflow-hidden bg-slate-100 group-hover:bg-slate-200 transition-colors duration-200 cursor-pointer">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 pointer-events-none"
                     loading="lazy"
                   />
                 </div>
-                <div className="p-3">
+                <div className="p-3 bg-teal-600 group-hover:bg-teal-500 transition-colors duration-200 cursor-pointer">
                   <p className={`text-sm font-medium text-center line-clamp-2 ${
                     selectedProduct?.name === product.name
-                      ? 'text-teal-600 font-semibold'
-                      : 'text-slate-900'
+                      ? 'text-white font-semibold'
+                      : 'text-slate-100'
                   }`}>
                     {product.name}
                   </p>
                   {selectedProduct?.name === product.name && (
                     <div className="mt-2 flex justify-center">
-                      <div className="w-8 h-1 bg-teal-600 rounded-full"></div>
+                      <div className="w-8 h-1 bg-white rounded-full"></div>
                     </div>
                   )}
                 </div>
@@ -234,6 +236,7 @@ function ServiceDetail() {
             ))}
           </div>
 
+          </ScrollReveal>
           {/* Back Button */}
           <div className="flex justify-center">
             <Link

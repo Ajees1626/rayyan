@@ -106,6 +106,30 @@ function Navbar() {
     }
   }, [servicesOpen])
 
+  // Close mobile menu on resize to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setIsOpen(false)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  // Lock body scroll when mobile menu open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+      document.body.style.touchAction = 'none'
+    } else {
+      document.body.style.overflow = ''
+      document.body.style.touchAction = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+      document.body.style.touchAction = ''
+    }
+  }, [isOpen])
+
   const navLinks = [
     { to: '/', label: 'Home', end: true },
     { to: '/services', label: 'Services', dropdown: true },
@@ -123,23 +147,16 @@ function Navbar() {
   const toggleServices = () => setServicesOpen((prev) => !prev)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm pt-[env(safe-area-inset-top)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-3" onClick={closeServices}>
-            <svg className="w-10 h-10 shrink-0" viewBox="0 0 40 40" fill="none">
-              <path d="M20 4L4 14v12h8v-8h4v8h8V14L20 4z" fill="#0d9488" />
-              <path d="M20 4l4 4-4 2-4-2 4-4z" fill="#f59e0b" />
-            </svg>
-            <div>
-              <span className="font-script text-2xl font-medium text-primary">
-                Rayyan
-              </span>
-              <p className="text-[10px] text-slate-600 font-medium tracking-wide leading-tight">
-                WINDOWS UPVC WINDOWS AND DOORS
-              </p>
-            </div>
+          <NavLink to="/" className="flex items-center shrink-0" onClick={closeServices}>
+            <img
+              src="/image/logo.png"
+              alt="Rayyan Windows - UPVC Windows and Doors"
+              className="h-8 sm:h-9 md:h-10 lg:h-12 w-auto object-contain"
+            />
           </NavLink>
 
           {/* Desktop nav links - center */}
@@ -201,7 +218,7 @@ function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors"
+            className="lg:hidden p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 active:bg-slate-200 transition-colors touch-manipulation"
             aria-expanded={isOpen}
             aria-label="Toggle menu"
           >
@@ -217,15 +234,15 @@ function Navbar() {
 
         {/* Mobile nav links */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-slate-200 px-4">
+          <div className="lg:hidden py-4 border-t border-slate-200 px-4 pb-[env(safe-area-inset-bottom)] max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain overscroll-y-contain">
             <div className="flex flex-col space-y-1">
               {/* Home - with active highlight */}
               <NavLink
                 to="/"
                 end
                 className={({ isActive }) =>
-                  `block px-4 py-3 rounded-lg transition-colors ${
-                    isActive ? 'text-teal-700 font-medium bg-teal-50' : 'text-slate-800 hover:bg-slate-50'
+                  `flex items-center px-4 py-3 min-h-[44px] rounded-lg transition-colors touch-manipulation ${
+                    isActive ? 'text-teal-700 font-medium bg-teal-50' : 'text-slate-800 hover:bg-slate-50 active:bg-slate-100'
                   }`
                 }
                 onClick={() => setIsOpen(false)}
@@ -238,7 +255,7 @@ function Navbar() {
                 <button
                   type="button"
                   onClick={() => setMobileServicesOpen((prev) => !prev)}
-                  className={`w-full px-4 py-3 rounded-lg text-left font-semibold transition-colors flex items-center justify-between ${
+                  className={`w-full px-4 py-3 min-h-[44px] rounded-lg text-left font-semibold transition-colors flex items-center justify-between active:bg-slate-100 touch-manipulation ${
                     mobileServicesOpen ? 'text-teal-600 bg-teal-50' : 'text-slate-800 hover:bg-slate-50'
                   }`}
                 >
@@ -263,8 +280,8 @@ function Navbar() {
                   key={link.label}
                   to={link.to}
                   className={({ isActive }) =>
-                    `block px-4 py-3 rounded-lg transition-colors ${
-                      isActive ? 'text-teal-600 font-medium bg-teal-50' : 'text-slate-800 hover:bg-slate-50'
+                    `flex items-center px-4 py-3 min-h-[44px] rounded-lg transition-colors touch-manipulation ${
+                      isActive ? 'text-teal-600 font-medium bg-teal-50' : 'text-slate-800 hover:bg-slate-50 active:bg-slate-100'
                     }`
                   }
                   onClick={() => setIsOpen(false)}
@@ -276,7 +293,7 @@ function Navbar() {
               {/* Get Quote button */}
               <NavLink
                 to="/contact"
-                className="block mx-0 mt-4 py-3 bg-teal-600 text-white text-center font-medium rounded-lg"
+                className="flex items-center justify-center mx-0 mt-4 py-3 min-h-[44px] bg-teal-600 text-white font-medium rounded-lg active:bg-teal-700 touch-manipulation"
                 onClick={() => setIsOpen(false)}
               >
                 Get Quote
