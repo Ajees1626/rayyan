@@ -70,7 +70,7 @@ function Contact() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="/image/Contact.webp"
+                  src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789423/Contact_nvodis.webp"
                   alt="Interior with windows and natural light"
                   className="w-full aspect-[4/3] lg:aspect-[5/4] object-cover grayscale"
                 />

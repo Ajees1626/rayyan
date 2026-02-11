@@ -153,7 +153,7 @@ function Navbar() {
           {/* Logo */}
           <NavLink to="/" className="flex items-center shrink-0" onClick={closeServices}>
             <img
-              src="/image/logo.png"
+              src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770790337/logo_awkalb.webp"
               alt="Rayyan Windows - UPVC Windows and Doors"
               className="h-8 sm:h-9 md:h-10 lg:h-12 w-auto object-contain"
             />

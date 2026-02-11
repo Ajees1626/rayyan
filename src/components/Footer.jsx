@@ -29,7 +29,7 @@ function Footer() {
           <div>
             <Link to="/" className="inline-block mb-4">
               <img
-                src="/image/logo.png"
+                src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770790337/logo_awkalb.webp"
                 alt="Rayyan Windows - UPVC Windows and Doors"
                 className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
               />

@@ -85,7 +85,7 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] lg:aspect-[5/4]">
                 <img
-                  src="/image/Projects.webp"
+                  src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789426/Projects_xlsnyx.webp"
                   alt="Elegant interior with double doors"
                   className="w-full h-full object-cover"
                 />

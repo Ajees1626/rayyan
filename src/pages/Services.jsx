@@ -151,7 +151,7 @@ function Services() {
             <div className="relative max-w-xl w-full mx-auto lg:mx-0">
               <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[16/10] bg-slate-200">
                 <img
-                  src="/image/home.webp"
+                  src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789425/home_zrdysm.webp"
                   alt="Modern interior entryway with doors and windows"
                   className="w-full h-full object-cover"
                   loading="lazy"

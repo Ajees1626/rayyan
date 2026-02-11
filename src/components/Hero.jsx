@@ -76,7 +76,7 @@ function Hero() {
           <div ref={rightRef} className="order-1 lg:order-2 relative">
             <div className="relative rounded-lg sm:rounded-xl overflow-hidden shadow-xl aspect-[4/3] lg:aspect-[5/4]">
               <img
-                src="/image/home.webp"
+                src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789425/home_zrdysm.webp"
                 alt="Luxury interior with modern doors and windows"
                 className="w-full h-full object-cover"
               />

@@ -40,7 +40,7 @@ function About() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="/image/about.webp"
+                  src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789422/about_ly3cd4.webp"
                   alt="Modern interior with large windows"
                   className="w-full aspect-[4/3] lg:aspect-[5/4] object-cover"
                 />
@@ -60,7 +60,7 @@ function About() {
             <div className="order-2 lg:order-1 flex justify-center">
               <div className="w-full max-w-xs sm:max-w-sm lg:max-w-md rounded-2xl overflow-hidden shadow-lg border-2 border-teal-600">
                 <img
-                  src="/image/Our Story.webp"
+                  src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789434/Our_Story_rcsukg.webp"
                   alt="Professional team"
                   className="w-full aspect-[4/5] object-cover object-top"
                 />

@@ -14,13 +14,13 @@
       "service": "UPVC Sliding Windows",
       "category": "RESIDENTIAL",
       "categoryColor": "bg-teal-600",
-      "image": "/image/Projects.webp",
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789455/p1.1_wuaplf.webp",
       "about": "Complete window replacement for 200+ units with premium UPVC sliding windows designed for soundproofing and energy efficiency.",
       "solution": "UPVC Sliding Windows",
       "gallery": [
-        "/image/Projects.webp",
-        "/image/Projects.webp",
-        "/image/home.webp"
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789455/p1.1_wuaplf.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789457/p1.2_s968bl.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789459/p1.3_pndykf.webp"
       ]
     },
     {
@@ -30,13 +30,13 @@
       "service": "Aluminium French Doors",
       "category": "RESIDENTIAL",
       "categoryColor": "bg-teal-600",
-      "image": "/image/home.webp",
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789460/p2.1_va4qi9.webp",
       "about": "Modernisation of a government office facade with high-performance aluminium French doors, increasing natural light and security.",
       "solution": "Aluminium French Doors",
       "gallery": [
-        "/image/home.webp",
-        "/image/Projects.webp",
-        "/image/home.webp"
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789460/p2.1_va4qi9.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789462/p2.2_sm6qg7.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789464/p2.3_ipgv6k.webp"
       ]
     },
     {
@@ -46,13 +46,13 @@
       "service": "Glass Façade System",
       "category": "COMMERCIAL",
       "categoryColor": "bg-teal-700",
-      "image": "/image/home.webp",
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789466/p3.1_nyyl6i.webp",
       "about": "Glass façade system for a commercial complex, blending contemporary aesthetics with thermal and acoustic performance.",
       "solution": "Glass Façade System",
       "gallery": [
-        "/image/home.webp",
-        "/image/Wooden Frames.webp",
-        "/image/home.webp"
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789466/p3.1_nyyl6i.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789468/p3.2_fj6irk.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789469/p3.3_fumsrk.webp"
       ]
     },
     {
@@ -62,13 +62,13 @@
       "service": "UPVC Casement Windows",
       "category": "RESIDENTIAL",
       "categoryColor": "bg-teal-600",
-      "image": "/image/Wooden Frames.webp",
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789472/p4.1_lp66xm.webp",
       "about": "UPVC casement windows installed for a premium independent house, enhancing ventilation and insulation.",
       "solution": "UPVC Casement Windows",
       "gallery": [
-        "/image/Wooden Frames.webp",
-        "/image/home.webp",
-        "/image/Projects.webp"
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789472/p4.1_lp66xm.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789473/p4.2_on9upk.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789475/p4.3_zbs1x5.webp"
       ]
     },
     {
@@ -78,13 +78,13 @@
       "service": "Balcony Sliding Doors",
       "category": "RESIDENTIAL",
       "categoryColor": "bg-teal-600",
-      "image": "/image/Projects.webp",
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789478/p5.1_uvvuin.webp",
       "about": "Balcony sliding doors for a multi-storey residence, connecting indoor living spaces with outdoor views.",
       "solution": "Balcony Sliding Doors",
       "gallery": [
-        "/image/Projects.webp",
-        "/image/home.webp",
-        "/image/home.webp"
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789478/p5.1_uvvuin.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789480/p5.2_qnkpnt.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789482/p5.3_g6f8vs.webp"
       ]
     },
     {
@@ -94,13 +94,13 @@
       "service": "Structural Glazing",
       "category": "COMMERCIAL",
       "categoryColor": "bg-teal-700",
-      "image": "/image/home.webp",
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789484/p6.1_wnrsdg.webp",
       "about": "High-rise structural glazing project delivering a sleek, modern exterior with optimised daylight and performance.",
       "solution": "Structural Glazing",
       "gallery": [
-        "/image/home.webp",
-        "/image/home.webp",
-        "/image/Wooden Frames.webp"
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789484/p6.1_wnrsdg.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789486/p6.2_rzwsqv.webp",
+        "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789453/p6.3_vbf9dz.webp"
       ]
     }
   ]
