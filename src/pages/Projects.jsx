@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import ScrollReveal from '../components/ScrollReveal'
 import projectsData from '../data/projects.json'
 
 const { projects, filters } = projectsData
@@ -55,7 +54,6 @@ function Projects() {
       <section className="py-10 sm:py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <ScrollReveal direction="up" duration={0.6}>
             {/* Left - Heading & Buttons */}
             <div>
               <h1
@@ -79,8 +77,6 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
                 </Link>
               </div>
             </div>
-            </ScrollReveal>
-            <ScrollReveal direction="up" delay={0.1} duration={0.6}>
             {/* Right - Image */}
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] lg:aspect-[5/4]">
@@ -91,12 +87,10 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
                 />
               </div>
             </div>
-            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      <ScrollReveal direction="up" duration={0.6}>
       {/* Projects Grid */}
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,7 +164,6 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
           </div>
         </div>
       </section>
-      </ScrollReveal>
 
       {/* Project Detail Modal */}
       {activeProject && (

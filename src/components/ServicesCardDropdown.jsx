@@ -63,14 +63,14 @@ function ServicesCardDropdown({ isOpen, onClose }) {
   return (
     <div
       ref={containerRef}
-      className="relative left-1/2 -translate-x-1/2 z-40 w-full max-w-5xl px-4"
+      className="relative left-1/2 -translate-x-1/2 z-40 w-full max-w-4xl md:max-w-5xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl px-4 md:px-6 lg:px-6"
       style={{ visibility: isOpen ? 'visible' : 'hidden', opacity: isOpen ? 1 : 0 }}
     >
       <div
-        className="p-4 bg-white rounded-xl shadow-lg border border-teal-200"
+        className="p-4 md:p-5 lg:p-5 xl:p-6 2xl:p-7 bg-white rounded-xl shadow-lg border border-teal-200"
         onMouseLeave={onClose}
       >
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-5 2xl:gap-6">
           {servicesItems.map((item, idx) => {
             const slug = serviceSlugMap[item.label]
             const detailPath = slug ? `/services/${slug}` : '/services'
@@ -79,10 +79,10 @@ function ServicesCardDropdown({ isOpen, onClose }) {
               <div
                 key={`${item.label}-${idx}`}
                 ref={setCardRef(idx)}
-                className="flex flex-col gap-2 p-3 sm:p-4 rounded-lg min-h-[120px] sm:min-h-[140px]"
+                className="flex flex-col gap-2 p-3 sm:p-4 md:p-4 lg:p-4 xl:p-5 2xl:p-5 rounded-lg min-h-[120px] sm:min-h-[130px] md:min-h-[140px] lg:min-h-[140px] xl:min-h-[150px] 2xl:min-h-[160px]"
                 style={{ backgroundColor: item.bgColor, color: '#fff' }}
               >
-                <div className="font-semibold tracking-tight text-base">
+                <div className="font-semibold tracking-tight text-sm sm:text-base md:text-base xl:text-lg">
                   {item.label}
                 </div>
                 <div className="flex flex-col gap-1 flex-1">
@@ -90,7 +90,7 @@ function ServicesCardDropdown({ isOpen, onClose }) {
                     <Link
                       key={lnk}
                       to={detailPath}
-                      className="inline-flex items-center gap-2 no-underline text-inherit hover:opacity-90 transition-opacity text-sm"
+                      className="inline-flex items-center gap-2 no-underline text-inherit hover:opacity-90 transition-opacity text-xs sm:text-sm py-0.5 touch-manipulation"
                       onClick={onClose}
                     >
                       <GoArrowUpRight className="shrink-0 text-sm" aria-hidden="true" />
@@ -99,7 +99,7 @@ function ServicesCardDropdown({ isOpen, onClose }) {
                   ))}
                   <Link
                     to="/services"
-                    className="inline-flex items-center gap-2 no-underline text-inherit hover:opacity-90 transition-opacity text-sm mt-auto"
+                    className="inline-flex items-center gap-2 no-underline text-inherit hover:opacity-90 transition-opacity text-xs sm:text-sm py-0.5 touch-manipulation mt-auto"
                     onClick={onClose}
                   >
                     <GoArrowUpRight className="shrink-0 text-sm" aria-hidden="true" />
@@ -110,11 +110,11 @@ function ServicesCardDropdown({ isOpen, onClose }) {
             )
           })}
         </div>
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-4 md:mt-5 xl:mt-6">
           <Link
             to="/services"
             onClick={onClose}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors"
+            className="inline-flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base font-medium rounded-lg bg-teal-600 text-white hover:bg-teal-700 active:bg-teal-800 transition-colors touch-manipulation"
           >
             View All Services
             <GoArrowUpRight className="shrink-0" aria-hidden="true" />

@@ -37,7 +37,7 @@ function MobileServicesSection({ onLinkClick }) {
             <NavLink
               key={item.label}
               to={detailPath}
-              className="block py-2.5 text-slate-800 hover:text-teal-600 text-sm"
+              className="block py-3 text-slate-800 hover:text-teal-600 text-sm touch-manipulation"
               onClick={onLinkClick}
             >
               {item.label}
@@ -148,19 +148,19 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm pt-[env(safe-area-inset-top)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8 relative">
         <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
           {/* Logo */}
           <NavLink to="/" className="flex items-center shrink-0" onClick={closeServices}>
             <img
               src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770790337/logo_awkalb.webp"
               alt="Rayyan Windows - UPVC Windows and Doors"
-              className="h-8 sm:h-9 md:h-10 lg:h-12 w-auto object-contain"
+              className="h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 w-auto object-contain"
             />
           </NavLink>
 
           {/* Desktop nav links - center */}
-          <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2 space-x-8">
+          <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2 space-x-6 lg:space-x-8 xl:space-x-10">
             {navLinks.map((link) => (
               <div key={link.label} className="relative">
                 {link.dropdown ? (
@@ -200,7 +200,7 @@ function Navbar() {
               aria-label="Close menu"
             />
           )}
-          <div className="hidden lg:block absolute left-0 right-0 top-20 pt-2 z-50">
+          <div className={`hidden lg:block absolute left-0 right-0 top-20 pt-2 z-50 ${!servicesOpen ? 'pointer-events-none' : ''}`}>
             <ServicesCardDropdown isOpen={servicesOpen} onClose={closeServices} />
           </div>
 
@@ -208,7 +208,7 @@ function Navbar() {
           <div className="hidden lg:block">
             <NavLink
               to="/contact"
-              className="inline-flex items-center px-6 py-2.5 bg-teal-600 text-white font-medium rounded-md shadow-md hover:bg-teal-700 transition-colors"
+              className="inline-flex items-center px-5 lg:px-6 py-2.5 text-sm lg:text-base font-medium rounded-md bg-teal-600 text-white shadow-md hover:bg-teal-700 active:bg-teal-800 transition-colors"
               onClick={closeServices}
             >
               Get Quote
@@ -234,7 +234,7 @@ function Navbar() {
 
         {/* Mobile nav links */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-slate-200 px-4 pb-[env(safe-area-inset-bottom)] max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain overscroll-y-contain">
+          <div className="lg:hidden py-4 border-t border-slate-200 px-4 sm:px-6 md:px-6 pb-[env(safe-area-inset-bottom)] max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain overscroll-y-contain">
             <div className="flex flex-col space-y-1">
               {/* Home - with active highlight */}
               <NavLink

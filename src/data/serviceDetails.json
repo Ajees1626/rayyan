@@ -16,7 +16,7 @@
         {
           "name": "Casement Windows",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788695/s1.2_etrvlx.webp",
-          "price": "₹350*",
+          "price": "₹450*",
           "priceUnit": "per sqft",
           "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance"]
         },
@@ -37,21 +37,21 @@
         {
           "name": "Mosquito Sliding Window",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788695/s1.5_ft87nb.webp",
-          "price": "₹250*",
+          "price": "₹420*",
           "priceUnit": "per sqft",
           "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Ventilation Control"]
         },
         {
           "name": "Top Open Window",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788695/s1.6_qza3ks.webp",
-          "price": "₹250*",
+          "price": "₹450*",
           "priceUnit": "per sqft",
           "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Outward Opening"]
         },
         {
           "name": "L Corner Window",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788696/s1.7_brtawe.webp",
-          "price": "₹250*",
+          "price": "₹350*",
           "priceUnit": "per sqft",
           "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Extended View"]
         },
@@ -72,21 +72,21 @@
         {
           "name": "French Windows",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788698/s1.10_fespbs.webp",
-          "price": "₹350*",
+          "price": "₹450*",
           "priceUnit": "per sqft",
           "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Elegant Design"]
         },
         {
           "name": "Bay Windows",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788699/s1.11_tg1b6k.webp",
-          "price": "₹350*",
+          "price": "₹450*",
           "priceUnit": "per sqft",
           "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Extended View", "Elegant Design"]
         },
         {
           "name": "Arch Windows",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788694/s1.12_bctbte.webp",
-          "price": "₹350*",
+          "price": "₹450*",
           "priceUnit": "per sqft",
           "features": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Elegant Design", "Curved Design"]
         }
@@ -96,77 +96,77 @@
       "title": "UPVC DOORS",
       "description": "Secure and stylish main entrance doors that make a strong first impression while ensuring safety.",
       "heroImage": "/image/home.webp",
-      "keyFeatures": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance"],
+      "keyFeatures": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance"],
       "products": [
         {
           "name": "Sliding Door",
           "image": "/image/home.webp",
           "price": "₹350*",
           "priceUnit": "per sqft",
-          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance"]
+          "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance"]
         },
         {
           "name": "Folding Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788711/s2.2_ww2i2p.webp",
-          "price": "₹350*",
+          "price": "₹1900*",
           "priceUnit": "per sqft",
-          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Wide Opening"]
+          "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Wide Opening"]
         },
         {
           "name": "French Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788712/s2.3_ow5os9.webp",
-          "price": "₹350*",
+          "price": "₹550*",
           "priceUnit": "per sqft",
-          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Elegant Design"]
+          "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Elegant Design"]
         },
         {
           "name": "Bathroom Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788712/s2.4_kmt6su.webp",
-          "price": "₹350*",
+          "price": "₹400*",
           "priceUnit": "per sqft",
-          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Space Saving"]
+          "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Space Saving"]
         },
         {
           "name": "2 Track Sliding Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788713/s2.5_qnzldj.webp",
           "price": "₹350*",
           "priceUnit": "per sqft",
-          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Smooth Sliding"]
+          "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Smooth Sliding"]
         },
         {
           "name": "3 Track Sliding Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788714/s2.6_pcp92r.webp",
-          "price": "₹350*",
+          "price": "₹400*",
           "priceUnit": "per sqft",
-          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Smooth Sliding"]
+          "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Smooth Sliding"]
         },
         {
           "name": "Double Open Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788715/s2.7_sxlksv.webp",
-          "price": "₹350*",
+          "price": "₹550*",
           "priceUnit": "per sqft",
-          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Wide Opening"]
+          "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Wide Opening"]
         },
         {
           "name": "Partition Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788715/s2.8_blmxb0.webp",
-          "price": "₹350*",
+          "price": "₹300*",
           "priceUnit": "per sqft",
-          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Space Division"]
+          "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Space Division"]
         },
         {
           "name": "Mortice Lock Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788716/s2.9_rtesw0.webp",
-          "price": "₹350*",
+          "price": "₹550*",
           "priceUnit": "per sqft",
-          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Enhanced Security"]
+          "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Enhanced Security"]
         },
         {
           "name": "Mesh Slide Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788711/s2.10_uacxjy.webp",
-          "price": "₹350*",
+          "price": "₹400*",
           "priceUnit": "per sqft",
-          "features": ["Security Glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Ventilation Control"]
+          "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance", "Ventilation Control"]
         }
       ]
     },
@@ -203,7 +203,22 @@
           "price": "₹350*",
           "priceUnit": "per sqft",
           "features": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"]
+        },
+        {
+          "name": "UPVC Hall Partition",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788742/s3.4_na4ian.webp",
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"]
+        },
+        {
+          "name": "UPVC wash basin",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788742/s3.4_na4ian.webp",
+          "price": "₹350*",
+          "priceUnit": "per sqft",
+          "features": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"]
         }
+        
       ]
     },
     "wooden-doors": {
@@ -215,29 +230,29 @@
         {
           "name": "Teak Wood Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788875/s4.1_sw0gtt.webp",
-          "price": "₹5,800*",
-          "priceUnit": "per sqft",
+          "price": "₹12,500*",
+          "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
           "name": "Vengai Wood Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788875/s4.2_rhmqjw.webp",
-          "price": "₹5,800*",
-          "priceUnit": "per sqft",
+          "price": "₹15,500*",
+          "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
-          "name": "Magakani Door",
+          "name": "Mahogany Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788877/s4.3_dtmkr4.webp",
-          "price": "₹5,800*",
-          "priceUnit": "per sqft",
+          "price": "₹6,000*",
+          "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
           "name": "Kongu Wood Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788873/s4.4_pbuxjc.webp",
-          "price": "₹5,800*",
-          "priceUnit": "per sqft",
+          "price": "₹8,000*",
+          "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         }
       ]
@@ -249,31 +264,45 @@
       "keyFeatures": ["Classic Design", "Durable", "Natural Look", "Customizable"],
       "products": [
         {
-          "name": "Teak Wood Frame",
+          "name": "Teak Main Door Frame",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788949/s5.1_nlx9pa.webp",
-          "price": "₹2,000*",
-          "priceUnit": "per sqft",
+          "price": "₹12,500*",
+          "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
-          "name": "Vengai Wood Frame",
+          "name": "Vengai Main Door Frame",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788949/s5.2_yajqcu.webp",
-          "price": "₹2,000*",
-          "priceUnit": "per sqft",
+          "price": "₹18,000*",
+          "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
-          "name": "Magakani Frame",
+          "name": "Teak Room Door Frame",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788949/s5.1_nlx9pa.webp",
+          "price": "₹3,900*",
+          "priceUnit": "per Piece",
+          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
+        },
+        {
+          "name": "Vengai Room Door Frame",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788949/s5.2_yajqcu.webp",
+          "price": "₹4,900*",
+          "priceUnit": "per Piece",
+          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
+        },
+        {
+          "name": "Mahogany Room Door Frame",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788951/s5.3_nqqftb.webp",
           "price": "₹2,000*",
-          "priceUnit": "per sqft",
+          "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
-          "name": "Kongu Wood Frame",
+          "name": "Kongu Room Door Frame",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770788948/s5.4_xpoz5t.webp",
-          "price": "₹2,000*",
-          "priceUnit": "per sqft",
+          "price": "₹3,000*",
+          "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         }
       ]
@@ -282,49 +311,56 @@
       "title": "INTERIOR ROOM DOORS",
       "description": "Modern interior doors for bedrooms, bathrooms, and living spaces.",
       "heroImage": "/image/Room Doors.webp",
-      "keyFeatures": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"],
+      "keyFeatures": ["", "Privacy", "Modern Design", "Easy Installation"],
       "products": [
         {
           "name": "Lamination Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789067/s6.1_mvwrnw.webp",
-          "price": "₹2,000*",
-          "priceUnit": "per sqft",
-          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
+          "price": "₹2,200*",
+          "priceUnit": "per Piece",
+          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "Steel Beading Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789068/s6.2_vijeps.webp",
-          "price": "₹2,000*",
-          "priceUnit": "per sqft",
-          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
+          "price": "₹2,900*",
+          "priceUnit": "per Piece",
+          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "Gold Beading Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789064/s6.3_ulkzc1.webp",
-          "price": "₹2,000*",
-          "priceUnit": "per sqft",
-          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
+          "price": "₹3,000*",
+          "priceUnit": "per Piece",
+          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "UV Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789065/s6.4_mcekl8.webp",
-          "price": "₹2,000*",
-          "priceUnit": "per sqft",
-          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
+          "price": "₹3,400*",
+          "priceUnit": "per Piece",
+          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "Premium UV Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789069/s6.5_sd6vlg.webp",
-          "price": "₹2,000*",
-          "priceUnit": "per sqft",
-          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
+          "price": "₹3,900*",
+          "priceUnit": "per Piece",
+          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
+        },
+        {
+          "name": "Embossed Membrane Doors",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789066/s6.6_jjhtox.webp",
+          "price": "₹3,000*",
+          "priceUnit": "per Piece",
+          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "Embossed Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789066/s6.6_jjhtox.webp",
-          "price": "₹2,000*",
-          "priceUnit": "per sqft",
-          "features": ["Soundproof", "Privacy", "Modern Design", "Easy Installation"]
+          "price": "₹1,900*",
+          "priceUnit": "per Piece",
+          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
         }
       ]
     },
@@ -335,30 +371,30 @@
       "keyFeatures": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"],
       "products": [
         {
-          "name": "Plain Door",
+          "name": "Plain Door With Frame",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789167/s7.1_fkbxhs.webp",
-          "price": "₹5,000*",
+          "price": "₹4,200*",
           "priceUnit": "per sqft",
           "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         },
         {
-          "name": "Carving Doors",
+          "name": "Carving Door With Frame",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789166/s7.2_hdrc1e.webp",
-          "price": "₹5,000*",
+          "price": "₹5,100*",
           "priceUnit": "per sqft",
           "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         },
         {
-          "name": "Digital Carving Doors",
+          "name": "Digital Carving Door With Frame",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789168/s7.3_r1py0s.webp",
-          "price": "₹5,000*",
+          "price": "₹5,900*",
           "priceUnit": "per sqft",
           "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         },
         {
-          "name": "Digital Print Doors",
+          "name": "Digital Print Door With Frame",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789169/s7.4_jcgwp0.webp",
-          "price": "₹5,000*",
+          "price": "₹5,500*",
           "priceUnit": "per sqft",
           "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         }
@@ -373,21 +409,21 @@
         {
           "name": "Zebra Screen",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789186/s8.1_m0k16d.webp",
-          "price": "₹1,600*",
+          "price": "₹150*",
           "priceUnit": "per sqft",
           "features": ["Mosquito Protection", "Privacy", "UV Protection", "Easy Installation"]
         },
         {
           "name": "Mosquito Window Screen",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789185/s8.2_qtyyfm.webp",
-          "price": "₹1,600*",
+          "price": "₹290*",
           "priceUnit": "per sqft",
           "features": ["Mosquito Protection", "Privacy", "UV Protection", "Easy Installation"]
         },
         {
           "name": "Mosquito Door Sliding",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789184/s8.3_nova7t.webp",
-          "price": "₹1,600*",
+          "price": "₹350*",
           "priceUnit": "per sqft",
           "features": ["Mosquito Protection", "Privacy", "UV Protection", "Easy Installation"]
         }

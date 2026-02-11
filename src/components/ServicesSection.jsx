@@ -1,9 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const services = [
   {
@@ -90,9 +86,6 @@ function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
   const scrollRef = useRef(null)
-  const headerRef = useRef(null)
-  const carouselRef = useRef(null)
-  const dotsRef = useRef(null)
 
   const scrollToIndex = (index) => {
     setActiveIndex(index)
@@ -139,54 +132,16 @@ function ServicesSection() {
     return () => clearTimeout(timer)
   }, [activeIndex, isHovered])
 
-  // Scroll-triggered animations
-  useEffect(() => {
-    const header = headerRef.current
-    const carousel = carouselRef.current
-    const dots = dotsRef.current
-    if (!header || !carousel) return
-
-    gsap.fromTo(header, { opacity: 0, y: 50 }, {
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
-      ease: 'power3.out',
-      scrollTrigger: { trigger: header, start: 'top 85%', toggleActions: 'play none none none' },
-    })
-
-    const cards = carousel.querySelectorAll('[data-index]')
-    gsap.fromTo(cards, { opacity: 0, y: 60 }, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      stagger: 0.08,
-      ease: 'power3.out',
-      scrollTrigger: { trigger: carousel, start: 'top 88%', toggleActions: 'play none none none' },
-    })
-
-    if (dots) {
-      gsap.fromTo(dots, { opacity: 0, scale: 0.8 }, {
-        opacity: 1,
-        scale: 1,
-        duration: 0.5,
-        ease: 'back.out(1.2)',
-        scrollTrigger: { trigger: dots, start: 'top 95%', toggleActions: 'play none none none' },
-      })
-    }
-
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill())
-  }, [])
-
   return (
-    <section className="py-10 sm:py-16 lg:py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-6 sm:mb-12">
+        <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
           <span className="inline-block px-3 sm:px-4 py-1.5 bg-teal-600 text-white text-xs font-semibold uppercase tracking-wider rounded mb-3 sm:mb-4">
             OUR SERVICES
           </span>
           <h2
-            className="font-serif text-2xl sm:text-4xl lg:text-5xl font-medium mb-3 sm:mb-4"
+            className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-3 sm:mb-4"
           >
             <span className="text-slate-900">PREMIUM </span>
             <span className="text-teal-600">SOLUTIONS</span>
@@ -198,34 +153,31 @@ function ServicesSection() {
 
         {/* Cards Carousel */}
         <div
-          ref={(el) => {
-            scrollRef.current = el
-            carouselRef.current = el
-          }}
+          ref={scrollRef}
           onScroll={handleScroll}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="flex gap-4 sm:gap-6 overflow-x-auto pb-6 sm:pb-8 snap-x snap-mandatory scrollbar-hide overflow-y-hidden px-1 -mx-1"
+          className="flex gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8 overflow-x-auto pb-6 sm:pb-8 md:pb-10 snap-x snap-mandatory scrollbar-hide overflow-y-hidden px-1 -mx-1 md:px-2 md:-mx-2"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
         >
           {services.map((service, index) => (
             <div
               key={service.id}
               data-index={index}
-              className="flex-shrink-0 w-[260px] min-[360px]:w-[280px] min-[400px]:w-[300px] sm:w-[340px] snap-center snap-always bg-white rounded-lg sm:rounded-xl shadow-md border border-teal-100 p-4 sm:p-6 hover:shadow-lg hover:-translate-y-1 hover:border-teal-200 active:scale-[0.99] transition-all duration-300 touch-pan-y"
+              className="flex-shrink-0 w-[260px] min-[360px]:w-[280px] min-[400px]:w-[300px] sm:w-[320px] md:w-[340px] lg:w-[360px] xl:w-[380px] snap-center snap-always bg-white rounded-lg sm:rounded-xl lg:rounded-xl shadow-md border border-teal-100 p-4 sm:p-5 md:p-6 hover:shadow-lg hover:-translate-y-1 hover:border-teal-200 active:scale-[0.99] transition-all duration-300 touch-pan-y"
             >
               {/* Icon */}
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-slate-100 flex items-center justify-center mb-3 sm:mb-4 shrink-0">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-teal-600 rounded flex items-center justify-center text-white">
+              <div className="w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-slate-100 flex items-center justify-center mb-3 sm:mb-4 shrink-0">
+                <div className="w-8 h-8 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-teal-600 rounded flex items-center justify-center text-white">
                   {service.icon}
                 </div>
               </div>
               {/* Title */}
-              <h3 className={`text-lg sm:text-xl font-medium mb-2 sm:mb-3 ${service.titleColor}`}>{service.title}</h3>
+              <h3 className={`text-lg sm:text-xl md:text-xl font-medium mb-2 sm:mb-3 ${service.titleColor}`}>{service.title}</h3>
               {/* Description */}
-              <p className="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed line-clamp-3 sm:line-clamp-none">{service.description}</p>
+              <p className="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed line-clamp-3 md:line-clamp-none">{service.description}</p>
               {/* Checklist */}
-              <ul className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
+              <ul className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-5 md:mb-6">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-2 text-xs sm:text-sm text-slate-700">
                     <svg className="w-5 h-5 text-teal-600 shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -250,13 +202,13 @@ function ServicesSection() {
         </div>
 
         {/* Pagination Dots */}
-        <div ref={dotsRef} className="flex justify-center gap-2 sm:gap-2.5 mt-4">
+        <div className="flex justify-center gap-2 sm:gap-2.5 md:gap-3 mt-4 sm:mt-5 md:mt-6">
           {services.map((_, index) => (
             <button
               key={index}
               type="button"
               onClick={() => scrollToIndex(index)}
-              className={`w-3 h-3 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 touch-manipulation min-w-[28px] min-h-[28px] sm:min-w-0 sm:min-h-0 ${
+              className={`w-3 h-3 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 touch-manipulation min-w-[28px] min-h-[28px] sm:min-w-0 sm:min-h-0 md:min-w-0 md:min-h-0 ${
                 activeIndex === index
                   ? 'bg-teal-600 scale-110 sm:scale-125'
                   : 'bg-teal-200 hover:bg-teal-300 active:bg-teal-400'

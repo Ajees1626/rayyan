@@ -1,5 +1,4 @@
 import { Link, useNavigate } from 'react-router-dom'
-import ScrollReveal from '../components/ScrollReveal'
 import servicesData from '../data/services.json'
 
 const iconMap = {
@@ -104,14 +103,13 @@ function Services() {
   return (
     <div className="bg-slate-50">
       {/* Hero Section */}
-      <section className="py-8 sm:py-10 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-            <ScrollReveal direction="up" duration={0.6}>
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 items-center">
             {/* Left - Heading & Buttons */}
             <div 
               onClick={() => navigate('/projects')}
-              className="max-w-xl cursor-pointer p-4 sm:p-6 rounded-xl hover:bg-slate-50 transition-colors"
+              className="max-w-xl cursor-pointer p-4 sm:p-5 md:p-6 lg:p-6 rounded-xl hover:bg-slate-50 transition-colors"
               role="button"
               tabIndex={0}
               onKeyDown={(e) => {
@@ -121,32 +119,30 @@ function Services() {
                 }
               }}
             >
-              <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium uppercase leading-tight mb-6 sm:mb-8">
+              <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase leading-tight mb-5 sm:mb-6 md:mb-8">
                 <span className="block text-slate-900">COMPLETE</span>
                 <span className="block text-teal-600">WINDOWS & DOORS</span>
                 <span className="block text-slate-900">SOLUTIONS</span>
               </h1>
-              <p className="text-slate-600 text-sm sm:text-base mb-6 sm:mb-8">
+              <p className="text-slate-600 text-sm sm:text-base md:text-base lg:text-lg mb-5 sm:mb-6 md:mb-8">
                 Explore our full range of UPVC, wooden, and aluminium solutions designed for Indian homes and
                 commercial spaces.
               </p>
               <div className="flex flex-wrap gap-3 sm:gap-4" onClick={(e) => e.stopPropagation()}>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors shadow-sm"
+                  className="inline-flex items-center justify-center min-h-[44px] px-5 sm:px-6 py-3 text-sm sm:text-base font-medium rounded-lg bg-teal-600 text-white hover:bg-teal-700 active:bg-teal-800 transition-colors shadow-sm touch-manipulation"
                 >
                   GET FREE QUOTE
                 </Link>
                 <Link
                   to="/projects"
-                  className="inline-flex items-center px-6 py-3 bg-white text-teal-600 font-medium rounded-lg border-2 border-teal-600 hover:bg-teal-50 transition-colors"
+                  className="inline-flex items-center justify-center min-h-[44px] px-5 sm:px-6 py-3 text-sm sm:text-base font-medium rounded-lg bg-white text-teal-600 border-2 border-teal-600 hover:bg-teal-50 active:bg-teal-100 transition-colors touch-manipulation"
                 >
                   VIEW PROJECTS
                 </Link>
               </div>
             </div>
-            </ScrollReveal>
-            <ScrollReveal direction="up" delay={0.1} duration={0.6}>
             {/* Right - Image */}
             <div className="relative max-w-xl w-full mx-auto lg:mx-0">
               <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[16/10] bg-slate-200">
@@ -158,34 +154,32 @@ function Services() {
                 />
               </div>
             </div>
-            </ScrollReveal>
           </div>
         </div>
       </section>
 
       {/* Services Grid - 8 cards */}
-      <section className="py-8 lg:py-16 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal direction="up" duration={0.6}>
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 pb-16 sm:pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           {/* Section Header */}
-          <div className="text-center mb-10">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <span className="inline-block px-4 py-1.5 bg-teal-100 text-slate-800 text-xs font-medium uppercase tracking-wider rounded-full mb-4">
               OUR SERVICES
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-medium uppercase leading-tight mb-3">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium uppercase leading-tight mb-3">
               <span className="text-slate-900">PREMIUM </span>
               <span className="text-teal-600">SOLUTIONS</span>
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
+            <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto px-2 sm:px-0">
               Comprehensive windows and doors solutions for residential and commercial spaces
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 sm:gap-5 md:gap-5 lg:gap-6 xl:gap-8">
             {services.map((service) => (
               <article
                 key={service.id}
-                className="group flex flex-col bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-200 transition-all cursor-pointer"
+                className="p-2 -m-2 cursor-pointer pointer-events-auto"
                 onClick={() => navigate(`/services/${service.slug}`)}
                 role="button"
                 tabIndex={0}
@@ -196,17 +190,20 @@ function Services() {
                   }
                 }}
               >
+                <div className="group flex flex-col bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-200 transition-[transform,box-shadow,border-color] duration-150 cursor-pointer pointer-events-auto touch-manipulation select-none">
                 <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 pointer-events-none select-none transform-gpu will-change-transform"
+                    loading="lazy"
+                    draggable={false}
                   />
-                  <div className="absolute top-3 left-3 right-3 bg-slate-900/70 backdrop-blur-sm rounded-lg p-3 text-white">
+                  <div className="absolute top-2 sm:top-3 left-2 sm:left-3 right-2 sm:right-3 bg-slate-900/70 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 text-white pointer-events-none">
                     <div className="flex items-start gap-2">
-                      <span className="shrink-0 mt-0.5">{service.icon}</span>
-                      <div>
-                        <p className="font-medium text-sm">{service.title}</p>
+                      <span className="shrink-0 mt-0.5 w-5 h-5">{service.icon}</span>
+                      <div className="min-w-0">
+                        <p className="font-medium text-xs sm:text-sm">{service.title}</p>
                         <p className="text-xs text-white/90 mt-0.5">
                           {service.products} Products available
                         </p>
@@ -214,60 +211,54 @@ function Services() {
                     </div>
                   </div>
                 </div>
-                <div className="p-4 flex-1 flex flex-col">
-                  <h2 className="text-lg font-medium text-slate-900 mb-1">{service.title}</h2>
-                  <p className="text-teal-600 text-sm font-medium mb-3">
+                <div className="p-4 sm:p-4 md:p-5 lg:p-5 flex-1 flex flex-col">
+                  <h2 className="text-base sm:text-lg font-medium text-slate-900 mb-1">{service.title}</h2>
+                  <p className="text-teal-600 text-sm font-medium mb-2 sm:mb-3">
                     {service.products} Products
                   </p>
-                  <p className="text-slate-600 text-sm mb-4 line-clamp-3 flex-1">{service.description}</p>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      navigate(`/services/${service.slug}`)
-                    }}
-                    className="mt-auto inline-flex items-center gap-1.5 text-teal-600 text-sm font-medium hover:underline"
+                  <p className="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3 flex-1">{service.description}</p>
+                  <span
+                    className="mt-auto inline-flex items-center gap-1.5 min-h-[44px] text-teal-600 text-sm font-medium group-hover:underline touch-manipulation"
                   >
                     View Details
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </button>
+                  </span>
+                </div>
                 </div>
               </article>
             ))}
           </div>
-          </ScrollReveal>
         </div>
       </section>
 
-      <ScrollReveal direction="up" duration={0.6}>
       {/* Additional Services */}
-      <section className="py-16 lg:py-20 bg-amber-50/40">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-24 bg-amber-50/40">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-900 text-xs font-medium uppercase tracking-wider rounded-full mb-4">
               ADDITIONAL SERVICES
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-medium uppercase text-slate-900 mb-3">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-medium uppercase text-slate-900 mb-3">
               ADDITIONAL <span className="text-teal-600">SERVICES</span>
             </h2>
-            <p className="text-slate-600 max-w-xl mx-auto">
+            <p className="text-slate-600 text-sm sm:text-base max-w-xl mx-auto px-2 sm:px-0">
               We provide comprehensive support throughout your project lifecycle
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-3xl mx-auto space-y-3 sm:space-y-4">
             {additionalServices.map((item) => (
               <div
                 key={item.title}
-                className="bg-white rounded-lg border border-slate-200 shadow-sm px-5 py-4 flex items-center gap-4"
+                className="bg-white rounded-lg border border-slate-200 shadow-sm px-4 sm:px-5 md:px-6 py-4 sm:py-4 md:py-5 flex items-center gap-3 sm:gap-4"
               >
-                <div className={`w-10 h-10 rounded-md ${item.bg} text-white flex items-center justify-center shrink-0`}>
+                <div className={`w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-md ${item.bg} text-white flex items-center justify-center shrink-0`}>
                   {item.icon}
                 </div>
-                <div className="min-w-0">
-                  <h3 className="font-serif text-base sm:text-lg font-medium text-slate-900 leading-snug">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-serif text-base sm:text-lg md:text-lg font-medium text-slate-900 leading-snug">
                     {item.title}
                   </h3>
                   <p className="text-slate-600 text-sm leading-snug mt-0.5">
@@ -279,27 +270,24 @@ function Services() {
           </div>
         </div>
       </section>
-      </ScrollReveal>
 
-      <ScrollReveal direction="up" duration={0.6}>
       {/* CTA Section */}
-      <section className="py-16 lg:py-20 bg-teal-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-white uppercase mb-6">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-24 bg-teal-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8 text-center">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-medium text-white uppercase mb-5 sm:mb-6 md:mb-8">
             NEED A CUSTOM SOLUTION?
           </h2>
-          <p className="text-white text-lg sm:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
             Our team can design and manufacture custom windows and doors tailored to your specific needs and architectural style.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-white text-teal-600 font-medium rounded-lg hover:bg-slate-50 transition-colors shadow-lg uppercase"
+            className="inline-flex items-center justify-center min-h-[44px] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium rounded-lg bg-white text-teal-600 hover:bg-slate-50 active:bg-slate-100 transition-colors shadow-lg uppercase touch-manipulation"
           >
             GET FREE CONSULTATION
           </Link>
         </div>
       </section>
-      </ScrollReveal>
     </div>
   )
 }

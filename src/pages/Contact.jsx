@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import ScrollReveal from '../components/ScrollReveal'
 
 const API_URL = import.meta.env.VITE_API_URL || 'https://rayyan-2.onrender.com/api'
 
@@ -50,7 +49,6 @@ function Contact() {
       <section className="py-10 sm:py-12 lg:py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <ScrollReveal direction="up" duration={0.6}>
             {/* Left - Headline */}
             <div>
               <h1
@@ -64,8 +62,6 @@ function Contact() {
                 Get a customised quotation with recommended profiles, glass types and hardware options. No obligation, no hard selling.
               </p>
             </div>
-            </ScrollReveal>
-            <ScrollReveal direction="up" delay={0.1} duration={0.6}>
             {/* Right - Image */}
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
@@ -76,12 +72,10 @@ function Contact() {
                 />
               </div>
             </div>
-            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      <ScrollReveal direction="up" duration={0.6}>
       {/* Contact Information & Quick Enquiry */}
       <section className="py-12 sm:py-16 lg:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -150,6 +144,11 @@ function Contact() {
                         No. 2/20D, Railway Mettu Street<br />
                         Near Nehru Hr. Sec. School<br />
                         TENKASI - 627811
+                      </p>
+                      <p className="text-slate-900 mt-4">
+                        No:29/12, Near BSNL Office, South Bye Pass Road<br />
+                        Vannarpettai, Tirunelveli-627003<br />
+                        Tamil Nadu
                       </p>
                     </div>
                   </div>
@@ -293,9 +292,7 @@ function Contact() {
           </div>
         </div>
       </section>
-      </ScrollReveal>
 
-      <ScrollReveal direction="up" duration={0.6}>
       {/* Visit Our Showroom */}
       <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -311,10 +308,15 @@ function Contact() {
               <p className="text-slate-600 mb-6">
                 Experience our products in person at our showroom. Schedule a visit today.
               </p>
-              <p className="text-slate-900 font-semibold mb-8">
+              <p className="text-slate-900 font-semibold mb-4">
                 No. 2/20D, Railway Mettu Street<br />
                 Near Nehru Hr. Sec. School<br />
                 TENKASI - 627811
+              </p>
+              <p className="text-slate-900 font-semibold mb-8">
+                No:29/12, Near BSNL Office, South Bye Pass Road<br />
+                Vannarpettai, Tirunelveli-627003<br />
+                Tamil Nadu
               </p>
 
               <div className="rounded-xl overflow-hidden border border-slate-200 aspect-video min-h-[220px] sm:min-h-[300px]">
@@ -334,7 +336,6 @@ function Contact() {
           </div>
         </div>
       </section>
-      </ScrollReveal>
     </div>
   )
 }

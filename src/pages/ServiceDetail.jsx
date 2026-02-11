@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { gsap } from 'gsap'
-import ScrollReveal from '../components/ScrollReveal'
 import serviceDetailsData from '../data/serviceDetails.json'
 
 // Get service data from JSON
@@ -96,15 +95,15 @@ function ServiceDetail() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section ref={heroRef} id="hero-section" className="py-10 sm:py-12 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section ref={heroRef} id="hero-section" className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 items-center">
             {/* Left - Text Content */}
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6 md:space-y-6">
               <div>
                 <h1
                   ref={titleRef}
-                  className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium uppercase leading-tight text-slate-900"
+                  className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase leading-tight text-slate-900"
                 >
                   {selectedProduct
                     ? selectedProduct.name.split(' ').map((word, i) => (
@@ -122,7 +121,7 @@ function ServiceDetail() {
               {selectedProduct ? (
                 <div className="space-y-4">
                   <div className="mb-4">
-                    <p className="text-3xl sm:text-4xl font-bold text-teal-600 mb-1">
+                    <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-teal-600 mb-1">
                       {selectedProduct.price}
                     </p>
                     <p className="text-sm text-slate-600">
@@ -132,14 +131,14 @@ function ServiceDetail() {
                       Terms & Conditions apply
                     </p>
                   </div>
-                  <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="bg-slate-50 rounded-lg p-3 sm:p-4 md:p-5">
                     <div className="flex items-center gap-2 mb-3">
                       <div className="w-1 h-6 bg-teal-600 rounded"></div>
                       <h4 className="font-semibold text-slate-900">Key Features</h4>
                     </div>
                     <ul className="space-y-2">
                       {(selectedProduct?.features || service.keyFeatures).map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-slate-700">
+                        <li key={idx} className="flex items-center gap-2 text-slate-700 text-sm sm:text-base">
                           <svg className="w-5 h-5 text-teal-600 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
@@ -150,7 +149,7 @@ function ServiceDetail() {
                   </div>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center px-6 py-3.5 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors"
+                    className="inline-flex items-center justify-center min-h-[44px] px-5 sm:px-6 py-3 sm:py-3.5 text-sm sm:text-base font-medium rounded-lg bg-teal-600 text-white hover:bg-teal-700 active:bg-teal-800 transition-colors touch-manipulation"
                   >
                     Make An Enquiry
                   </Link>
@@ -158,7 +157,7 @@ function ServiceDetail() {
               ) : (
                 <p
                   ref={descRef}
-                  className="text-slate-600 text-base sm:text-lg leading-relaxed"
+                  className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed"
                 >
                   {service.description}
                 </p>
@@ -169,7 +168,7 @@ function ServiceDetail() {
             <div className="relative">
               <div
                 ref={imageRef}
-                className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] lg:aspect-[5/4] bg-slate-200"
+                className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[16/10] lg:aspect-[5/4] bg-slate-200"
               >
                 <img
                   src={selectedProduct ? selectedProduct.image : service.heroImage}
@@ -184,21 +183,16 @@ function ServiceDetail() {
       </section>
 
       {/* Product Selection Grid */}
-      <section className="py-10 sm:py-12 lg:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal direction="up" duration={0.6}>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-medium text-slate-900 mb-6 sm:mb-8 text-center">
-            Select Product:
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-serif font-medium text-slate-900 mb-6 sm:mb-8 md:mb-10 text-center">
+            Select Product
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mb-8 sm:mb-10">
             {service.products.map((product, index) => (
               <div
                 key={index}
-                className={`group bg-white rounded-lg border-2 overflow-hidden shadow-sm transition-all cursor-pointer transform hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg hover:border-teal-400 duration-200 ${
-                  selectedProduct?.name === product.name
-                    ? 'border-teal-600 ring-2 ring-teal-200 shadow-lg'
-                    : 'border-slate-200'
-                }`}
+                className="p-2 -m-2 cursor-pointer pointer-events-auto"
                 onClick={() => handleProductClick(product)}
                 role="button"
                 tabIndex={0}
@@ -210,16 +204,24 @@ function ServiceDetail() {
                 }}
                 aria-label={`Select ${product.name}`}
               >
+                <div
+                  className={`group bg-white rounded-lg border-2 overflow-hidden shadow-sm transition-[transform,box-shadow,border-color] cursor-pointer pointer-events-auto transform hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg hover:border-teal-400 duration-150 touch-manipulation select-none ${
+                    selectedProduct?.name === product.name
+                      ? 'border-teal-600 ring-2 ring-teal-200 shadow-lg'
+                      : 'border-slate-200'
+                  }`}
+                >
                 <div className="aspect-square overflow-hidden bg-slate-100 group-hover:bg-slate-200 transition-colors duration-200 cursor-pointer">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 pointer-events-none"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 pointer-events-none select-none transform-gpu will-change-transform"
                     loading="lazy"
+                    draggable={false}
                   />
                 </div>
-                <div className="p-3 bg-teal-600 group-hover:bg-teal-500 transition-colors duration-200 cursor-pointer">
-                  <p className={`text-sm font-medium text-center line-clamp-2 ${
+                <div className="p-2.5 sm:p-3 md:p-3 bg-teal-600 group-hover:bg-teal-500 transition-colors duration-200 cursor-pointer">
+                  <p className={`text-xs sm:text-sm font-medium text-center line-clamp-2 ${
                     selectedProduct?.name === product.name
                       ? 'text-white font-semibold'
                       : 'text-slate-100'
@@ -232,16 +234,16 @@ function ServiceDetail() {
                     </div>
                   )}
                 </div>
+                </div>
               </div>
             ))}
           </div>
 
-          </ScrollReveal>
           {/* Back Button */}
           <div className="flex justify-center">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 hover:shadow-lg active:scale-95 transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] px-5 sm:px-6 py-3 text-sm sm:text-base font-medium rounded-lg bg-teal-600 text-white hover:bg-teal-700 hover:shadow-lg active:scale-95 active:bg-teal-800 transition-all duration-200 cursor-pointer touch-manipulation"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -254,8 +256,8 @@ function ServiceDetail() {
 
       {/* Reset Button - Show when product is selected */}
       {selectedProduct && (
-        <section className="py-8 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-8 sm:py-10 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
             <div className="flex justify-center">
               <button
                 onClick={() => {
@@ -287,7 +289,7 @@ function ServiceDetail() {
                     })
                   }
                 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-200 text-slate-700 font-medium rounded-lg hover:bg-slate-300 transition-colors"
+                className="inline-flex items-center justify-center gap-2 min-h-[44px] px-5 sm:px-6 py-3 text-sm sm:text-base font-medium rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 active:bg-slate-400 transition-colors touch-manipulation"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />

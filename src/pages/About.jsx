@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import ScrollReveal from '../components/ScrollReveal'
 
 function About() {
   return (
@@ -8,7 +7,6 @@ function About() {
       <section className="py-10 sm:py-12 lg:py-20 bg-amber-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <ScrollReveal direction="up" duration={0.6}>
             {/* Left - Headline & Buttons */}
             <div>
               <h1
@@ -34,8 +32,6 @@ function About() {
                 </Link>
               </div>
             </div>
-            </ScrollReveal>
-            <ScrollReveal direction="up" delay={0.1} duration={0.6}>
             {/* Right - Image */}
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
@@ -46,12 +42,10 @@ function About() {
                 />
               </div>
             </div>
-            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      <ScrollReveal direction="up" duration={0.6}>
       {/* Our Story Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,9 +93,7 @@ function About() {
           </div>
         </div>
       </section>
-      </ScrollReveal>
 
-      <ScrollReveal direction="up" duration={0.6}>
       {/* Our Core Values */}
       <section className="py-16 lg:py-24 bg-teal-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,9 +154,7 @@ function About() {
           </div>
         </div>
       </section>
-      </ScrollReveal>
 
-      <ScrollReveal direction="up" duration={0.6}>
       {/* Why Choose Rayyan Window */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,9 +188,7 @@ function About() {
           </div>
         </div>
       </section>
-      </ScrollReveal>
 
-      <ScrollReveal direction="up" duration={0.6}>
       {/* Our Process */}
       <section className="py-16 lg:py-24 bg-amber-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -258,9 +246,7 @@ function About() {
           </div>
         </div>
       </section>
-      </ScrollReveal>
 
-      <ScrollReveal direction="up" duration={0.6}>
       {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-teal-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -280,7 +266,6 @@ function About() {
           </Link>
         </div>
       </section>
-      </ScrollReveal>
     </div>
   )
 }
