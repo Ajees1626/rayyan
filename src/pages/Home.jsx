@@ -6,13 +6,13 @@ import CTASection from '../components/CTASection'
 
 function Home() {
   return (
-    <div>
+    <main className="min-h-screen overflow-x-hidden">
       <Hero />
       <ServicesSection />
       <FeaturedProjects />
       <WhyChooseUs />
       <CTASection />
-    </div>
+    </main>
   )
 }
 

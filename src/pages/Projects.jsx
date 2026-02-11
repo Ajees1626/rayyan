@@ -51,27 +51,27 @@ function Projects() {
   return (
     <div className="bg-slate-50">
       {/* Hero Section - Recent Indian Projects */}
-      <section className="py-10 sm:py-12 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 items-center">
             {/* Left - Heading & Buttons */}
             <div>
               <h1
-className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium uppercase mb-6 sm:mb-8"
+                className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase mb-5 sm:mb-6 md:mb-8"
               >
                 <span className="block text-slate-900">RECENT</span>
                 <span className="block text-teal-600">INDIAN PROJECTS</span>
               </h1>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors"
+                  className="inline-flex items-center justify-center min-h-[44px] px-5 sm:px-6 py-3 text-sm sm:text-base font-medium rounded-lg bg-teal-600 text-white hover:bg-teal-700 active:bg-teal-800 transition-colors touch-manipulation"
                 >
                   GET FREE QUOTE
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center px-6 py-3 bg-white text-teal-600 font-medium rounded-lg border-2 border-teal-600 hover:bg-teal-50 transition-colors"
+                  className="inline-flex items-center justify-center min-h-[44px] px-5 sm:px-6 py-3 text-sm sm:text-base font-medium rounded-lg bg-white text-teal-600 border-2 border-teal-600 hover:bg-teal-50 active:bg-teal-100 transition-colors touch-manipulation"
                 >
                   VIEW SERVICES
                 </Link>
@@ -79,7 +79,7 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
             </div>
             {/* Right - Image */}
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] lg:aspect-[5/4]">
+              <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[16/10] lg:aspect-[5/4]">
                 <img
                   src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789426/Projects_xlsnyx.webp"
                   alt="Elegant interior with double doors"
@@ -92,16 +92,16 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
       </section>
 
       {/* Projects Grid */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           {/* Filter Buttons */}
-          <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-3 mb-6 sm:mb-8 md:mb-10">
             {filters.map((filter) => (
               <button
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 sm:px-6 py-2.5 rounded-lg font-medium text-sm uppercase transition-colors cursor-pointer min-h-[44px] flex items-center ${
+                className={`px-4 sm:px-6 py-2.5 rounded-lg font-medium text-xs sm:text-sm uppercase transition-colors cursor-pointer min-h-[44px] flex items-center touch-manipulation ${
                   activeFilter === filter
                     ? 'bg-teal-600 text-white'
                     : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
@@ -112,11 +112,11 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8">
             {filteredProjects.map((project) => (
               <article
                 key={project.id}
-                className="group bg-white rounded-xl border border-teal-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                className="group bg-white rounded-xl border border-teal-100 overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 hover:border-teal-200 transition-all duration-200 cursor-pointer touch-manipulation"
                 onClick={() => openProjectModal(project)}
               >
                 <div className="relative aspect-[4/3] overflow-hidden group">
@@ -126,13 +126,13 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <span
-                    className={`absolute top-3 right-3 px-3 py-1 ${project.categoryColor} text-white text-xs font-semibold uppercase rounded`}
+                    className={`absolute top-2 sm:top-3 right-2 sm:right-3 px-2.5 sm:px-3 py-1 ${project.categoryColor} text-white text-xs font-semibold uppercase rounded`}
                   >
                     {project.category}
                   </span>
                 </div>
-                <div className="p-5">
-                  <h2 className="text-lg font-medium text-slate-900 mb-2">{project.title}</h2>
+                <div className="p-4 sm:p-5 md:p-5">
+                  <h2 className="text-base sm:text-lg font-medium text-slate-900 mb-2">{project.title}</h2>
                   <div className="flex items-center gap-1.5 text-teal-600 text-sm mb-4">
                     <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -141,7 +141,7 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
                     <span>{project.location}</span>
                   </div>
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="inline-block px-3 py-1.5 bg-teal-100 text-teal-700 text-sm font-medium rounded">
+                    <span className="inline-block px-3 py-1.5 bg-teal-100 text-teal-700 text-xs sm:text-sm font-medium rounded">
                       {project.service}
                     </span>
                     <button
@@ -150,7 +150,7 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
                         e.stopPropagation()
                         openProjectModal(project)
                       }}
-                      className="inline-flex items-center gap-2 text-teal-600 text-sm font-medium hover:underline"
+                      className="inline-flex items-center gap-2 min-h-[44px] text-teal-600 text-sm font-medium hover:underline touch-manipulation"
                     >
                       View Details
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -167,13 +167,13 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
 
       {/* Project Detail Modal */}
       {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-3 sm:p-4 overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-3 sm:p-4 md:p-6 overflow-y-auto">
           <div className="relative w-full max-w-6xl bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl my-4 max-h-[calc(100vh-2rem)] overflow-y-auto">
             {/* Close button */}
             <button
               type="button"
               onClick={closeProjectModal}
-              className="absolute top-4 right-4 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow hover:bg-slate-100"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow hover:bg-slate-100 touch-manipulation min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0"
               aria-label="Close project details"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
@@ -183,7 +183,7 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
 
             <div className="grid grid-cols-1 lg:grid-cols-2">
               {/* Left - Main image with slider controls */}
-              <div className="relative bg-teal-300 flex items-center justify-center p-4 lg:p-6">
+              <div className="relative bg-teal-300 flex items-center justify-center p-4 sm:p-5 md:p-6">
                 <div className="w-full max-h-[520px] aspect-[4/3] overflow-hidden rounded-2xl lg:rounded-3xl">
                   <img
                     src={activeProject.gallery?.[activeImageIndex] || activeProject.image}
@@ -198,7 +198,7 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
                     <button
                       type="button"
                       onClick={handlePrevImage}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-teal-400 bg-white/90 text-teal-700 shadow hover:bg-white"
+                      className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-teal-400 bg-white/90 text-teal-700 shadow hover:bg-white touch-manipulation"
                       aria-label="Previous image"
                     >
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
@@ -209,7 +209,7 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
                     <button
                       type="button"
                       onClick={handleNextImage}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-teal-400 bg-white/90 text-teal-700 shadow hover:bg-white"
+                      className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-teal-400 bg-white/90 text-teal-700 shadow hover:bg-white touch-manipulation"
                       aria-label="Next image"
                     >
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
@@ -226,12 +226,12 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
               </div>
 
               {/* Right - Details */}
-              <div className="flex flex-col gap-6 p-6 sm:p-8 lg:p-10 bg-slate-50">
+              <div className="flex flex-col gap-5 sm:gap-6 p-5 sm:p-6 md:p-8 lg:p-10 bg-slate-50">
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.2em] text-teal-600 mb-2">
                     Completed Project
                   </p>
-                  <h2 className="font-serif text-3xl sm:text-4xl font-medium text-slate-900 mb-3">
+                  <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-slate-900 mb-3">
                     {activeProject.title}
                   </h2>
                   <div className="flex flex-wrap items-center gap-3 text-sm mb-4">
@@ -289,13 +289,13 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
                     <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-800 mb-3">
                       Project Gallery
                     </h3>
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className="grid grid-cols-3 gap-2 sm:gap-3">
                       {activeProject.gallery.map((img, idx) => (
                         <button
                           key={img}
                           type="button"
                           onClick={() => setActiveImageIndex(idx)}
-                          className={`relative aspect-[4/3] overflow-hidden rounded-lg border ${
+                          className={`relative aspect-[4/3] overflow-hidden rounded-lg border touch-manipulation ${
                             activeImageIndex === idx ? 'border-teal-500 ring-2 ring-teal-200' : 'border-slate-200'
                           }`}
                         >
@@ -314,7 +314,7 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
                 <div className="mt-auto flex flex-wrap gap-3">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center rounded-lg bg-teal-600 px-6 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 transition-colors"
+                    className="inline-flex items-center justify-center min-h-[44px] rounded-lg bg-teal-600 px-5 sm:px-6 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 active:bg-teal-800 transition-colors touch-manipulation"
                     onClick={closeProjectModal}
                   >
                     Get Free Quote
@@ -322,7 +322,7 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
                   <button
                     type="button"
                     onClick={closeProjectModal}
-                    className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-6 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 transition-colors"
+                    className="inline-flex items-center justify-center min-h-[44px] rounded-lg border border-slate-300 px-5 sm:px-6 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors touch-manipulation"
                   >
                     Close
                   </button>
@@ -334,9 +334,9 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
       )}
 
       {/* Stats Section */}
-      <section className="py-16 lg:py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {[
               { value: '1500+', label: 'Projects Completed' },
               { value: '10+', label: 'Years Experience' },
@@ -345,9 +345,9 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="bg-amber-50/80 rounded-xl p-5 sm:p-6 lg:p-8 text-center"
+                className="bg-amber-50/80 rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 text-center"
               >
-                <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-teal-600 mb-2">{stat.value}</p>
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-teal-600 mb-2">{stat.value}</p>
                 <p className="text-slate-800 font-medium text-sm">{stat.label}</p>
               </div>
             ))}
@@ -356,28 +356,28 @@ className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium u
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8 text-center">
           <h2
-className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 uppercase mb-6"
+            className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 uppercase mb-5 sm:mb-6 md:mb-8"
           >
             Ready to start your
             <br />
             project?
           </h2>
-          <p className="text-slate-600 text-lg mb-10 max-w-xl mx-auto">
+          <p className="text-slate-600 text-base sm:text-lg mb-8 sm:mb-10 max-w-xl mx-auto px-2 sm:px-0">
             Let&apos;s discuss how we can transform your space with premium windows and doors.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-3.5 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors w-full sm:w-auto justify-center"
+              className="inline-flex items-center justify-center min-h-[44px] px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-700 active:bg-teal-800 transition-colors w-full sm:w-auto touch-manipulation"
             >
               GET FREE QUOTE
             </Link>
             <Link
               to="/services"
-              className="inline-flex items-center px-8 py-3.5 bg-white text-teal-600 font-semibold rounded-lg border-2 border-teal-600 hover:bg-teal-50 transition-colors w-full sm:w-auto justify-center"
+              className="inline-flex items-center justify-center min-h-[44px] px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-lg bg-white text-teal-600 border-2 border-teal-600 hover:bg-teal-50 active:bg-teal-100 transition-colors w-full sm:w-auto touch-manipulation"
             >
               VIEW SERVICES
             </Link>

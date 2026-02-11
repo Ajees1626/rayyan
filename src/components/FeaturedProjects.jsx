@@ -16,7 +16,7 @@ function FeaturedProjects() {
             className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-3 sm:mb-4"
           >
             <span className="text-slate-900">OUR </span>
-            <span className="text-teal-600 font-sans">WORK</span>
+            <span className="text-teal-600 ">WORK</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto px-1">
             Explore our portfolio of completed projects across India
