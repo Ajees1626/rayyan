@@ -173,7 +173,7 @@ function ServiceDetail() {
                 <img
                   src={selectedProduct ? selectedProduct.image : service.heroImage}
                   alt={selectedProduct ? selectedProduct.name : service.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                 />
               </div>

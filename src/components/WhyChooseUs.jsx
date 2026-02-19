@@ -50,7 +50,7 @@ function WhyChooseUs() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="bg-amber-400 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 flex flex-col justify-center min-h-[80px] sm:min-h-[100px] md:min-h-[120px] lg:min-h-[130px] xl:min-h-[140px]"
+                className="bg-[#f3a31f] rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 flex flex-col justify-center min-h-[80px] sm:min-h-[100px] md:min-h-[120px] lg:min-h-[130px] xl:min-h-[140px]"
               >
                 <p className="font-serif text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold text-white">{stat.value}</p>
                 <p className="text-white/95 text-xs sm:text-sm mt-1">{stat.label}</p>

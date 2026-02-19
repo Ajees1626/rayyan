@@ -12,14 +12,14 @@
       "title": "UPVC Doors",
       "products": 10,
       "description": "Secure and stylish main entrance doors that make a strong first impression while ensuring safety.",
-      "image": "/image/home.webp"
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771482561/2_iqh21v.webp"
     },
     {
       "id": 3,
       "title": "UPVC Interior",
       "products": 4,
       "description": "Elegant interior doors and partitions for modern homes and offices.",
-      "image": "/image/home.webp"
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771482564/3_uboyrm.jpg"
     },
     {
       "id": 4,
@@ -54,7 +54,7 @@
       "title": "Screens & Blinds",
       "products": 3,
       "description": "Mosquito nets, window screens, and blinds for complete home solutions.",
-      "image": "/image/home.webp"
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771482553/8_h8upbs.jpg"
     }
   ]
 }

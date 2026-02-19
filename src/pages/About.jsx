@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import { GiUpgrade } from 'react-icons/gi'
+import { FaArrowsDownToPeople } from 'react-icons/fa6'
+import { RiFlashlightFill } from 'react-icons/ri'
 
 function About() {
   return (
@@ -116,9 +119,7 @@ function About() {
             {/* Quality First */}
             <div className="bg-white rounded-xl border-2 border-teal-200 p-5 sm:p-6 md:p-8">
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-teal-100 flex items-center justify-center mb-4 sm:mb-6">
-                <svg className="w-8 h-8 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
+                <GiUpgrade className="w-8 h-8 text-teal-600" />
               </div>
               <h3 className="text-lg sm:text-xl font-medium text-slate-900 mb-2 sm:mb-3">Quality First</h3>
               <p className="text-slate-600 leading-relaxed">
@@ -129,9 +130,7 @@ function About() {
             {/* Customer Focus */}
             <div className="bg-white rounded-xl border-2 border-teal-200 p-5 sm:p-6 md:p-8">
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-amber-100 flex items-center justify-center mb-4 sm:mb-6">
-                <svg className="w-8 h-8 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                </svg>
+                <FaArrowsDownToPeople className="w-8 h-8 text-amber-600" />
               </div>
               <h3 className="text-lg sm:text-xl font-medium text-slate-900 mb-2 sm:mb-3">Customer Focus</h3>
               <p className="text-slate-600 leading-relaxed">
@@ -142,9 +141,7 @@ function About() {
             {/* Innovation */}
             <div className="bg-white rounded-xl border-2 border-teal-200 p-5 sm:p-6 md:p-8">
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-teal-100 flex items-center justify-center mb-4 sm:mb-6">
-                <svg className="w-8 h-8 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.2 3-3.3 3-5.7 0-3.9-3.1-7-7-7z" />
-                </svg>
+                <RiFlashlightFill className="w-8 h-8 text-teal-600" />
               </div>
               <h3 className="text-lg sm:text-xl font-medium text-slate-900 mb-2 sm:mb-3">Innovation</h3>
               <p className="text-slate-600 leading-relaxed">
