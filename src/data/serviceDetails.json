@@ -173,7 +173,7 @@
     "upvc-interior": {
       "title": "UPVC INTERIOR",
       "description": "Elegant interior doors and partitions for modern homes and offices.",
-      "heroImage": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771482564/3_uboyrm.jpg",
+      "heroImage": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771822669/3_uboyrm.avif",
       "keyFeatures": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"],
       "products": [
         {
@@ -206,14 +206,14 @@
         },
         {
           "name": "UPVC Hall Partition",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481040/3.5_bz05hy.jpg",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771822516/3.5_bz05hy.jpg",
           "price": "₹350*",
           "priceUnit": "per sqft",
           "features": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"]
         },
         {
           "name": "UPVC wash basin",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481041/3.6_nouzu2.png",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771822529/3.6_nouzu2.jpg",
           "price": "₹350*",
           "priceUnit": "per sqft",
           "features": ["Soundproof", "Easy Maintenance", "Modern Design", "Space Efficient"]
@@ -265,35 +265,29 @@
       "products": [
         {
           "name": "Teak Main Door Frame",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481238/5.1_jfkcxo.jpg",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481239/5.2_uxfuvl.webp",
           "price": "₹12,500*",
           "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
           "name": "Vengai Main Door Frame",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481239/5.2_uxfuvl.webp",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771485543/5.4_fpyxkv.jpg",
           "price": "₹18,000*",
           "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
-        {
-          "name": "Teak Room Door Frame",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481239/5.3_jqhmkz.jpg",
-          "price": "₹3,900*",
-          "priceUnit": "per Piece",
-          "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
-        },
+   
         {
           "name": "Vengai Room Door Frame",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481241/5.4_fpyxkv.webp",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481238/5.1_jfkcxo.jpg",
           "price": "₹4,900*",
           "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
         },
         {
           "name": "Mahogany Room Door Frame",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481244/5.5_dlgili.jpg",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771823180/5.5_dlgili.jpg",
           "price": "₹2,000*",
           "priceUnit": "per Piece",
           "features": ["Classic Design", "Durable", "Natural Look", "Customizable"]
@@ -322,7 +316,7 @@
         },
         {
           "name": "Steel Beading Door",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481286/6.2_kgrjuc.jpg",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771824157/6.2_kgrjuc.jpg",
           "price": "₹2,900*",
           "priceUnit": "per Piece",
           "features": ["", "Privacy", "Modern Design", "Easy Installation"]
@@ -343,7 +337,7 @@
         },
         {
           "name": "Premium UV Doors",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481289/6.5_oj4ssc.webp",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771824182/6.5_oj4ssc.jpg",
           "price": "₹3,900*",
           "priceUnit": "per Piece",
           "features": ["", "Privacy", "Modern Design", "Easy Installation"]
@@ -356,8 +350,8 @@
           "features": ["", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
-          "name": "Embossed Doors",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481285/6.7_wwbvn3.jpg",
+          "name": "chettinadu Doors",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771823871/6.7_wwbvn3.jpg",
           "price": "₹1,900*",
           "priceUnit": "per Piece",
           "features": ["", "Privacy", "Modern Design", "Easy Installation"]
@@ -367,7 +361,7 @@
     "wpc-doors": {
       "title": "WPC DOORS",
       "description": "Waterproof composite doors perfect for bathrooms and wet areas.",
-      "heroImage": "/image/home.webp",
+      "heroImage": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771824872/WPC_Doors_aaox9t.png",
       "keyFeatures": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"],
       "products": [
         {
@@ -379,21 +373,21 @@
         },
         {
           "name": "Carving Door With Frame",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481328/7.2_rbryo7.jpg",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771824968/7.2_rbryo7.png",
           "price": "₹5,100*",
           "priceUnit": "per sqft",
           "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         },
         {
           "name": "Digital Carving Door With Frame",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481328/7.3_safndl.jpg",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771824954/7.3_safndl.png",
           "price": "₹5,900*",
           "priceUnit": "per sqft",
           "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         },
         {
           "name": "Digital Print Door With Frame",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481325/7.4_se0fqh.jpg",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771824981/7.4_se0fqh.png",
           "price": "₹5,500*",
           "priceUnit": "per sqft",
           "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
