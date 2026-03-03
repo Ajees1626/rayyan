@@ -2,15 +2,23 @@ import { Link } from 'react-router-dom'
 import { GiUpgrade } from 'react-icons/gi'
 import { FaArrowsDownToPeople } from 'react-icons/fa6'
 import { RiFlashlightFill } from 'react-icons/ri'
+import AnimateIn from '../components/AnimateIn'
+import Seo from '../components/Seo'
 
 function About() {
   return (
     <div>
+      <Seo
+        title="About Us"
+        description="Rayyan Window – building trust with quality UPVC windows and doors. Our story, values, and commitment to Indian homes."
+        canonical="/about"
+      />
       {/* Hero Section */}
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-amber-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 items-center">
             {/* Left - Headline & Buttons */}
+            <AnimateIn entrance delay={0}>
             <div>
               <h1
                 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase leading-tight mb-5 sm:mb-6 md:mb-8"
@@ -35,7 +43,9 @@ function About() {
                 </Link>
               </div>
             </div>
+            </AnimateIn>
             {/* Right - Image */}
+            <AnimateIn entrance delay={100}>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
@@ -45,11 +55,13 @@ function About() {
                 />
               </div>
             </div>
+            </AnimateIn>
           </div>
         </div>
       </section>
 
       {/* Our Story Section */}
+      <AnimateIn scroll>
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
@@ -96,8 +108,10 @@ function About() {
           </div>
         </div>
       </section>
+      </AnimateIn>
 
       {/* Our Core Values */}
+      <AnimateIn scroll>
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-teal-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
@@ -151,6 +165,7 @@ function About() {
           </div>
         </div>
       </section>
+      </AnimateIn>
 
       {/* Why Choose Rayyan Window */}
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">

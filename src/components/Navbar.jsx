@@ -27,28 +27,11 @@ const mobileServicesCards = [
 
 function MobileServicesSection({ onLinkClick }) {
   return (
-    <div className="mt-2">
-      {/* Simple list with vertical teal line (Image 2 style) */}
-      <div className="relative pl-4 border-l-2 border-teal-500 ml-2 space-y-0">
-        {mobileServicesCards.map((item) => {
-          const slug = serviceSlugMap[item.label]
-          const detailPath = slug ? `/services/${slug}` : '/services'
-          return (
-            <NavLink
-              key={item.label}
-              to={detailPath}
-              className="block py-3 text-slate-800 hover:text-teal-600 text-sm touch-manipulation"
-              onClick={onLinkClick}
-            >
-              {item.label}
-            </NavLink>
-          )
-        })}
-      </div>
-      {/* View All Services → */}
+    <div className="mt-2 sm:mt-3 pl-1">
+      {/* View All Services → at top (new model) */}
       <NavLink
         to="/services"
-        className="flex items-center gap-2 mt-3 text-teal-600 font-medium text-sm"
+        className="flex items-center gap-2 text-teal-600 font-medium text-sm sm:text-base py-2 touch-manipulation"
         onClick={onLinkClick}
       >
         View All Services
@@ -56,20 +39,20 @@ function MobileServicesSection({ onLinkClick }) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       </NavLink>
-      {/* Colored card blocks (Image 1 style) */}
-      <div className="mt-3 flex flex-col gap-2">
+      {/* Colored card blocks */}
+      <div className="mt-2 sm:mt-3 flex flex-col gap-2 sm:gap-2.5">
         {mobileServicesCards.map((item) => {
           const slug = serviceSlugMap[item.label]
           const detailPath = slug ? `/services/${slug}` : '/services'
           return (
-            <div key={item.label} className={`rounded-lg p-3 ${item.color} text-white`}>
-              <div className="font-semibold text-sm mb-2">{item.label}</div>
+            <div key={item.label} className={`rounded-lg p-3 sm:p-4 ${item.color} text-white`}>
+              <div className="font-semibold text-sm sm:text-base mb-2">{item.label}</div>
               <div className="flex flex-col gap-1">
                 {item.links.map((lnk) => (
                   <NavLink
                     key={lnk}
                     to={detailPath}
-                    className="inline-flex items-center gap-2 text-sm hover:opacity-90"
+                    className="inline-flex items-center gap-2 text-sm sm:text-base hover:opacity-90 py-0.5 touch-manipulation"
                     onClick={onLinkClick}
                   >
                     <GoArrowUpRight className="shrink-0" />
@@ -78,7 +61,7 @@ function MobileServicesSection({ onLinkClick }) {
                 ))}
               <NavLink
                 to="/services"
-                className="inline-flex items-center gap-2 text-sm hover:opacity-90 mt-1"
+                className="inline-flex items-center gap-2 text-sm sm:text-base hover:opacity-90 mt-1 touch-manipulation"
                 onClick={onLinkClick}
               >
                 <GoArrowUpRight className="shrink-0" />
@@ -130,6 +113,15 @@ function Navbar() {
     }
   }, [isOpen])
 
+  // Close mobile menu on Escape
+  useEffect(() => {
+    const handleEscape = (e) => e.key === 'Escape' && setIsOpen(false)
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape)
+      return () => document.removeEventListener('keydown', handleEscape)
+    }
+  }, [isOpen])
+
   const navLinks = [
     { to: '/', label: 'Home', end: true },
     { to: '/services', label: 'Services', dropdown: true },
@@ -149,18 +141,18 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm pt-[env(safe-area-inset-top)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8 relative">
-        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-[72px] lg:h-20">
           {/* Logo */}
           <NavLink to="/" className="flex items-center shrink-0" onClick={closeServices}>
             <img
               src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770790337/logo_awkalb.webp"
               alt="Rayyan Windows - UPVC Windows and Doors"
-              className="h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 w-auto object-contain"
+              className="h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 w-auto object-contain max-h-12"
             />
           </NavLink>
 
           {/* Desktop nav links - center */}
-          <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2 space-x-6 lg:space-x-8 xl:space-x-10">
+          <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2 space-x-6 xl:space-x-8">
             {navLinks.map((link) => (
               <div key={link.label} className="relative">
                 {link.dropdown ? (
@@ -218,7 +210,7 @@ function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 active:bg-slate-200 transition-colors touch-manipulation"
+            className="lg:hidden p-2.5 sm:p-3 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 active:bg-slate-200 transition-colors touch-manipulation"
             aria-expanded={isOpen}
             aria-label="Toggle menu"
           >
@@ -232,74 +224,110 @@ function Navbar() {
           </button>
         </div>
 
-        {/* Mobile nav links */}
+        {/* Mobile menu: off-canvas overlay + left panel (new model) */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-slate-200 px-4 sm:px-6 md:px-6 pb-[env(safe-area-inset-bottom)] max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain overscroll-y-contain">
-            <div className="flex flex-col space-y-1">
-              {/* Home - with active highlight */}
-              <NavLink
-                to="/"
-                end
-                className={({ isActive }) =>
-                  `flex items-center px-4 py-3 min-h-[44px] rounded-lg transition-colors touch-manipulation ${
-                    isActive ? 'text-teal-700 font-medium bg-teal-50' : 'text-slate-800 hover:bg-slate-50 active:bg-slate-100'
-                  }`
-                }
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </NavLink>
-
-              {/* Services - expandable */}
-              <div>
+          <>
+            {/* Dark overlay - tap to close */}
+            <div
+              className="lg:hidden fixed inset-0 z-[60] bg-slate-900/60 backdrop-blur-sm transition-opacity"
+              onClick={() => setIsOpen(false)}
+              aria-label="Close menu"
+            />
+            {/* White slide-in panel */}
+            <div
+              className="lg:hidden fixed inset-y-0 left-0 z-[70] w-[min(320px,85vw)] max-w-full bg-white shadow-2xl flex flex-col pt-[env(safe-area-inset-top)] animate-slide-in-left"
+              aria-modal="true"
+              aria-label="Navigation menu"
+            >
+              {/* Panel header: logo + close */}
+              <div className="flex items-center justify-between shrink-0 px-4 sm:px-5 pt-4 pb-3 border-b border-slate-200">
+                <NavLink to="/" className="flex items-center shrink-0" onClick={() => setIsOpen(false)}>
+                  <img
+                    src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770790337/logo_awkalb.webp"
+                    alt="Rayyan Windows - UPVC Windows and Doors"
+                    className="h-9 sm:h-10 w-auto object-contain"
+                  />
+                </NavLink>
                 <button
                   type="button"
-                  onClick={() => setMobileServicesOpen((prev) => !prev)}
-                  className={`w-full px-4 py-3 min-h-[44px] rounded-lg text-left font-semibold transition-colors flex items-center justify-between active:bg-slate-100 touch-manipulation ${
-                    mobileServicesOpen ? 'text-teal-600 bg-teal-50' : 'text-slate-800 hover:bg-slate-50'
-                  }`}
+                  onClick={() => setIsOpen(false)}
+                  className="p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 active:bg-slate-200 transition-colors touch-manipulation"
+                  aria-label="Close menu"
                 >
-                  Services
-                  <svg
-                    className={`w-4 h-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
-                {mobileServicesOpen && (
-                  <MobileServicesSection onLinkClick={() => setIsOpen(false)} />
-                )}
               </div>
 
-              {/* Projects, About, Contact */}
-              {navLinks.slice(2).map((link) => (
+              {/* Scrollable nav links */}
+              <div className="flex-1 overflow-y-auto overscroll-contain py-4 px-3 sm:px-4">
+                <div className="flex flex-col gap-0.5">
+                  <NavLink
+                    to="/"
+                    end
+                    className={({ isActive }) =>
+                      `flex items-center px-4 py-3 min-h-[44px] rounded-lg text-sm sm:text-base transition-colors touch-manipulation ${
+                        isActive ? 'text-teal-700 font-medium bg-teal-50' : 'text-slate-800 hover:bg-slate-50 active:bg-slate-100'
+                      }`
+                    }
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Home
+                  </NavLink>
+
+                  <div>
+                    <button
+                      type="button"
+                      onClick={() => setMobileServicesOpen((prev) => !prev)}
+                      className={`w-full px-4 py-3 min-h-[44px] rounded-lg text-left text-sm sm:text-base font-semibold transition-colors flex items-center justify-between touch-manipulation ${
+                        mobileServicesOpen ? 'text-teal-600 bg-teal-50' : 'text-slate-800 hover:bg-slate-50 active:bg-slate-100'
+                      }`}
+                    >
+                      Services
+                      <svg
+                        className={`w-4 h-4 transition-transform shrink-0 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {mobileServicesOpen && (
+                      <MobileServicesSection onLinkClick={() => setIsOpen(false)} />
+                    )}
+                  </div>
+
+                  {navLinks.slice(2).map((link) => (
+                    <NavLink
+                      key={link.label}
+                      to={link.to}
+                      className={({ isActive }) =>
+                        `flex items-center px-4 py-3 min-h-[44px] rounded-lg text-sm sm:text-base transition-colors touch-manipulation ${
+                          isActive ? 'text-teal-600 font-medium bg-teal-50' : 'text-slate-800 hover:bg-slate-50 active:bg-slate-100'
+                        }`
+                      }
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.label}
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
+
+              {/* Get Quote - full width at bottom */}
+              <div className="shrink-0 p-4 pt-3 pb-[env(safe-area-inset-bottom)] border-t border-slate-200">
                 <NavLink
-                  key={link.label}
-                  to={link.to}
-                  className={({ isActive }) =>
-                    `flex items-center px-4 py-3 min-h-[44px] rounded-lg transition-colors touch-manipulation ${
-                      isActive ? 'text-teal-600 font-medium bg-teal-50' : 'text-slate-800 hover:bg-slate-50 active:bg-slate-100'
-                    }`
-                  }
+                  to="/contact"
+                  className="flex items-center justify-center w-full py-3 mb-3 min-h-[48px] text-sm sm:text-base font-medium rounded-lg bg-teal-600 text-white hover:bg-teal-700 active:bg-teal-800 transition-colors touch-manipulation"
                   onClick={() => setIsOpen(false)}
                 >
-                  {link.label}
+                  Get Quote
                 </NavLink>
-              ))}
-
-              {/* Get Quote button */}
-              <NavLink
-                to="/contact"
-                className="flex items-center justify-center mx-0 mt-4 py-3 min-h-[44px] bg-teal-600 text-white font-medium rounded-lg active:bg-teal-700 touch-manipulation"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Quote
-              </NavLink>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </div>
       {/* Teal separator line */}

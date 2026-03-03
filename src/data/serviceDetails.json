@@ -3,7 +3,7 @@
     "upvc-windows": {
       "title": "UPVC WINDOWS",
       "description": "Premium UPVC windows designed for Indian climate conditions. Energy-efficient, soundproof, and low maintenance.",
-      "heroImage": "/image/home.webp",
+      "heroImage": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1772432178/home_og5zpc.webp",
       "keyFeatures": ["Soundproof", "Weather Resistant", "Energy Efficient", "Low Maintenance"],
       "products": [
         {
@@ -100,7 +100,7 @@
       "products": [
         {
           "name": "Sliding Door",
-          "image": "/image/home.webp",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1772432178/home_og5zpc.webp",
           "price": "₹350*",
           "priceUnit": "per sqft",
           "features": ["Touch glass", "Weather Resistant", "Energy Efficient", "Low Maintenance"]
@@ -224,7 +224,7 @@
     "wooden-doors": {
       "title": "WOODEN DOORS",
       "description": "Classic and elegant wooden doors with premium finishes.",
-      "heroImage": "/image/Wooden Doors.webp",
+      "heroImage": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1772432178/Wooden_Doors_qhvtmq.webp",
       "keyFeatures": ["Classic Design", "Durable", "Natural Look", "Customizable"],
       "products": [
         {
@@ -260,7 +260,7 @@
     "wooden-frames": {
       "title": "WOODEN FRAMES",
       "description": "Premium wooden window and door frames for traditional and modern homes.",
-      "heroImage": "/image/Wooden Frames.webp",
+      "heroImage": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1772432174/Wooden_Frames_zx175j.webp",
       "keyFeatures": ["Classic Design", "Durable", "Natural Look", "Customizable"],
       "products": [
         {
@@ -304,57 +304,64 @@
     "interior-room-doors": {
       "title": "INTERIOR ROOM DOORS",
       "description": "Modern interior doors for bedrooms, bathrooms, and living spaces.",
-      "heroImage": "/image/Room Doors.webp",
-      "keyFeatures": ["", "Privacy", "Modern Design", "Easy Installation"],
+      "heroImage": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1772432173/Room_Doors_lmak8s.webp",
+      "keyFeatures": ["customized size available", "Privacy", "Modern Design", "Easy Installation"],
       "products": [
         {
           "name": "Lamination Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481285/6.1_whw61j.avif",
           "price": "₹2,200*",
           "priceUnit": "per Piece",
-          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
+          "features": ["customized size available", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "Steel Beading Door",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771824157/6.2_kgrjuc.jpg",
           "price": "₹2,900*",
           "priceUnit": "per Piece",
-          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
+          "features": ["customized size available", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "Gold Beading Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481287/6.3_vphmxv.jpg",
           "price": "₹3,000*",
           "priceUnit": "per Piece",
-          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
+          "features": ["customized size available", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "UV Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481288/6.4_uf0aet.webp",
           "price": "₹3,400*",
           "priceUnit": "per Piece",
-          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
+          "features": ["customized size available", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "Premium UV Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771824182/6.5_oj4ssc.jpg",
           "price": "₹3,900*",
           "priceUnit": "per Piece",
-          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
+          "features": ["customized size available", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
           "name": "Embossed Membrane Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481290/6.6_ildfrd.jpg",
           "price": "₹3,000*",
           "priceUnit": "per Piece",
-          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
+          "features": ["customized size available", "Privacy", "Modern Design", "Easy Installation"]
         },
         {
-          "name": "chettinadu Doors",
+          "name": "Membrane Doors",
           "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771823871/6.7_wwbvn3.jpg",
           "price": "₹1,900*",
           "priceUnit": "per Piece",
-          "features": ["", "Privacy", "Modern Design", "Easy Installation"]
+          "features": ["customized size available", "Privacy", "Modern Design", "Easy Installation"]
+        },
+        {
+          "name": "Chettinadu membrane door",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771837184/6.8_qjzspq.png",
+          "price": "₹3,900*",
+          "priceUnit": "per Piece",
+          "features": ["customized size available", "Privacy", "Modern Design", "Easy Installation"]
         }
       ]
     },
@@ -366,14 +373,14 @@
       "products": [
         {
           "name": "Plain Door With Frame",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771481326/7.1_jfvshz.jpg",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771837253/7.1_jfvshz.jpg",
           "price": "₹4,200*",
           "priceUnit": "per sqft",
           "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]
         },
         {
           "name": "Carving Door With Frame",
-          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771824968/7.2_rbryo7.png",
+          "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1771837239/7.2_rbryo7.png",
           "price": "₹5,100*",
           "priceUnit": "per sqft",
           "features": ["Waterproof", "Termite Proof", "Low Maintenance", "Durable"]

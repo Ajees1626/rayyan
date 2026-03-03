@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import AnimateIn from './AnimateIn'
 
 function Hero() {
   const stats = [
@@ -12,7 +13,7 @@ function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center">
           {/* Left column - Content */}
-          <div className="order-2 lg:order-1">
+          <AnimateIn entrance delay={100} className="order-2 lg:order-1">
             {/* Headline */}
             <h1
               className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight text-slate-900 mb-4 sm:mb-6 md:mb-8"
@@ -55,10 +56,10 @@ function Hero() {
                 </div>
               ))}
             </div>
-          </div>
+          </AnimateIn>
 
           {/* Right column - Image with badges */}
-          <div className="order-1 lg:order-2 relative">
+          <AnimateIn entrance delay={200} className="order-1 lg:order-2 relative">
             <div className="relative rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl aspect-[4/3] md:aspect-[16/10] lg:aspect-[5/4] xl:aspect-[3/2]">
               <img
                 src="https://res.cloudinary.com/dcc2v0usg/image/upload/v1770789425/home_zrdysm.webp"
@@ -76,7 +77,7 @@ function Hero() {
                 <p className="font-medium text-xs sm:text-sm">Soundproof Design</p>
               </div>
             </div>
-          </div>
+          </AnimateIn>
         </div>
       </div>
     </section>

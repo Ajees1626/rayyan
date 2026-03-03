@@ -1,5 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import servicesData from '../data/services.json'
+import AnimateIn from '../components/AnimateIn'
+import Seo from '../components/Seo'
 
 const iconMap = {
   house: (
@@ -102,11 +104,17 @@ function Services() {
 
   return (
     <div className="bg-slate-50">
+      <Seo
+        title="Services"
+        description="UPVC windows, doors, wooden doors, WPC doors, interior solutions, and screens. Premium quality for Indian homes. Get a quote."
+        canonical="/services"
+      />
       {/* Hero Section */}
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 items-center">
             {/* Left - Heading & Buttons */}
+            <AnimateIn entrance>
             <div 
               onClick={() => navigate('/projects')}
               className="max-w-xl cursor-pointer p-4 sm:p-5 md:p-6 lg:p-6 rounded-xl hover:bg-slate-50 transition-colors"
@@ -143,7 +151,9 @@ function Services() {
                 </Link>
               </div>
             </div>
+            </AnimateIn>
             {/* Right - Image */}
+            <AnimateIn entrance delay={150}>
             <div className="relative max-w-xl w-full mx-auto lg:mx-0">
               <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[16/10] bg-slate-200">
                 <img
@@ -154,11 +164,13 @@ function Services() {
                 />
               </div>
             </div>
+            </AnimateIn>
           </div>
         </div>
       </section>
 
       {/* Services Grid - 8 cards */}
+      <AnimateIn scroll>
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 pb-16 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           {/* Section Header */}
@@ -232,6 +244,7 @@ function Services() {
           </div>
         </div>
       </section>
+      </AnimateIn>
 
       {/* Additional Services */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-24 bg-amber-50/40">

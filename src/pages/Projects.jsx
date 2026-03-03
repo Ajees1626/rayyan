@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import projectsData from '../data/projects.json'
+import AnimateIn from '../components/AnimateIn'
+import Seo from '../components/Seo'
 
 const { projects, filters } = projectsData
 
@@ -50,11 +52,17 @@ function Projects() {
 
   return (
     <div className="bg-slate-50">
+      <Seo
+        title="Projects"
+        description="Recent Rayyan UPVC windows and doors projects. Residential and commercial installations across India."
+        canonical="/projects"
+      />
       {/* Hero Section - Recent Indian Projects */}
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 items-center">
             {/* Left - Heading & Buttons */}
+            <AnimateIn entrance>
             <div>
               <h1
                 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase mb-5 sm:mb-6 md:mb-8"
@@ -77,7 +85,9 @@ function Projects() {
                 </Link>
               </div>
             </div>
+            </AnimateIn>
             {/* Right - Image */}
+            <AnimateIn entrance delay={150}>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[16/10] lg:aspect-[5/4]">
                 <img
@@ -87,11 +97,13 @@ function Projects() {
                 />
               </div>
             </div>
+            </AnimateIn>
           </div>
         </div>
       </section>
 
       {/* Projects Grid */}
+      <AnimateIn scroll>
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           {/* Filter Buttons */}
@@ -164,6 +176,7 @@ function Projects() {
           </div>
         </div>
       </section>
+      </AnimateIn>
 
       {/* Project Detail Modal */}
       {activeProject && (

@@ -1,6 +1,9 @@
 import { useState } from 'react'
+import AnimateIn from '../components/AnimateIn'
+import Seo from '../components/Seo'
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://rayyan-2.onrender.com/api'
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || '0eb0310f-8507-4fd8-99df-cdc641789071'
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
 
 function Contact() {
   const [form, setForm] = useState({
@@ -24,17 +27,37 @@ function Contact() {
     setMessage({ type: '', text: '' })
     setLoading(true)
     try {
-      const res = await fetch(`${API_URL}/contact`, {
+      const messageBody = [
+        `Name: ${form.name}`,
+        `Email: ${form.email}`,
+        `Mobile: ${form.mobile}`,
+        `City: ${form.city}`,
+        `Project Type: ${form.projectType || '—'}`,
+        `Windows/Doors: ${form.windowsDoors || '—'}`,
+        form.additionalInfo ? `Additional Info:\n${form.additionalInfo}` : '',
+      ].filter(Boolean).join('\n')
+
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: form.name,
+          email: form.email,
+          message: messageBody,
+          subject: `Rayyan Enquiry from ${form.name} (${form.city})`,
+          mobile: form.mobile,
+          city: form.city,
+          projectType: form.projectType,
+          windowsDoors: form.windowsDoors,
+        }),
       })
       const data = await res.json()
       if (data.success) {
-        setMessage({ type: 'success', text: data.message })
+        setMessage({ type: 'success', text: data.message || 'Thank you! We will get back to you soon.' })
         setForm({ name: '', email: '', mobile: '', city: '', projectType: '', windowsDoors: '', additionalInfo: '' })
       } else {
-        setMessage({ type: 'error', text: data.message || 'Something went wrong.' })
+        setMessage({ type: 'error', text: data.message || 'Something went wrong. Please try again or contact us directly.' })
       }
     } catch (err) {
       setMessage({ type: 'error', text: 'Could not submit. Please try again or contact us directly.' })
@@ -45,11 +68,17 @@ function Contact() {
 
   return (
     <div>
+      <Seo
+        title="Contact"
+        description="Contact Rayyan UPVC Windows & Doors. Get a quote, visit our showrooms in Tenkasi, Tirunelveli, Chennai, or send an enquiry."
+        canonical="/contact"
+      />
       {/* Hero Section */}
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 items-center">
             {/* Left - Headline */}
+            <AnimateIn entrance>
             <div>
               <h1
                 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase leading-tight mb-5 sm:mb-6 md:mb-8"
@@ -62,7 +91,9 @@ function Contact() {
                 Get a customised quotation with recommended profiles, glass types and hardware options. No obligation, no hard selling.
               </p>
             </div>
+            </AnimateIn>
             {/* Right - Image */}
+            <AnimateIn entrance delay={150}>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
@@ -72,11 +103,13 @@ function Contact() {
                 />
               </div>
             </div>
+            </AnimateIn>
           </div>
         </div>
       </section>
 
       {/* Contact Information & Quick Enquiry */}
+      <AnimateIn scroll>
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
@@ -108,6 +141,7 @@ function Contact() {
                       <p className="text-xs text-slate-500 uppercase font-medium mb-1">Call & WhatsApp</p>
                       <a href="tel:+919360189417" className="block text-slate-900 font-medium hover:text-teal-600">+91-93601-89417</a>
                       <a href="tel:+917092514039" className="block text-slate-900 font-medium hover:text-teal-600">+91-70925-14039</a>
+                      <a href="tel:+919042894878" className="block text-slate-900 font-medium hover:text-teal-600">+91-90428-94878 (Tirunelveli Showroom)</a>
                       <p className="text-sm text-slate-500 mt-2">Mon-Sat, 10:00 am - 7:00 pm</p>
                     </div>
                   </div>
@@ -123,7 +157,8 @@ function Contact() {
                     </div>
                     <div>
                       <p className="text-xs text-slate-500 uppercase font-medium mb-1">Email</p>
-                      <a href="mailto:sales@rayyanwindow.in" className="block text-slate-900 font-medium hover:text-teal-600">sales@rayyanwindow.in</a>
+                      <a href="mailto:info@rayyanwindows.com" className="block text-slate-900 font-medium hover:text-teal-600">info@rayyanwindows.com</a>
+                      <a href="mailto:windowsrayyan@gmail.com" className="block text-slate-900 font-medium hover:text-teal-600">windowsrayyan@gmail.com</a>
                       <p className="text-sm text-slate-500 mt-2">Share your floor plan / site photos for faster response.</p>
                     </div>
                   </div>
@@ -149,6 +184,12 @@ function Contact() {
                         No:29/12, Near BSNL Office, South Bye Pass Road<br />
                         Vannarpettai, Tirunelveli-627003<br />
                         Tamil Nadu
+                      </p>
+                      <p className="text-slate-900 mt-4">
+                        Chennai – Unit 2 (Factory)<br />
+                        158 Rice Mill Street<br />
+                        OMR, Thiruporur<br />
+                        Chengalpattu District
                       </p>
                     </div>
                   </div>
@@ -295,8 +336,10 @@ function Contact() {
           </div>
         </div>
       </section>
+      </AnimateIn>
 
       {/* Visit Our Showroom */}
+      <AnimateIn scroll>
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           <div className="rounded-2xl border-2 border-teal-200 overflow-hidden bg-white">
@@ -316,10 +359,17 @@ function Contact() {
                 Near Nehru Hr. Sec. School<br />
                 TENKASI - 627811
               </p>
-              <p className="text-slate-900 font-semibold text-sm sm:text-base mb-6 sm:mb-8">
+              <p className="text-slate-900 font-semibold text-sm sm:text-base mb-4">
                 No:29/12, Near BSNL Office, South Bye Pass Road<br />
                 Vannarpettai, Tirunelveli-627003<br />
-                Tamil Nadu
+                Tamil Nadu<br />
+                <a href="tel:+919042894878" className="text-teal-600 font-medium hover:underline mt-1 inline-block">+91-90428-94878</a>
+              </p>
+              <p className="text-slate-900 font-semibold text-sm sm:text-base mb-6 sm:mb-8">
+                <span className="text-teal-600">Chennai – Unit 2 (Factory)</span><br />
+                158 Rice Mill Street<br />
+                OMR, Thiruporur<br />
+                Chengalpattu District
               </p>
 
               <div className="rounded-xl overflow-hidden border border-slate-200 aspect-video min-h-[200px] sm:min-h-[250px] md:min-h-[300px]">
@@ -339,6 +389,7 @@ function Contact() {
           </div>
         </div>
       </section>
+      </AnimateIn>
     </div>
   )
 }

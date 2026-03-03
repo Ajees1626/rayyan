@@ -5,7 +5,7 @@
       "title": "UPVC Windows",
       "products": 12,
       "description": "Premium UPVC windows designed for Indian climate conditions. Energy-efficient, soundproof, and low maintenance.",
-      "image": "/image/home.webp"
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1772432178/home_og5zpc.webp"
     },
     {
       "id": 2,
@@ -26,21 +26,21 @@
       "title": "Wooden Doors",
       "products": 4,
       "description": "Classic and elegant wooden doors with premium finishes.",
-      "image": "/image/Wooden Doors.webp"
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1772432178/Wooden_Doors_qhvtmq.webp"
     },
     {
       "id": 5,
       "title": "Wooden Frames",
       "products": 4,
       "description": "Premium wooden window and door frames for traditional and modern homes.",
-      "image": "/image/Wooden Frames.webp"
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1772432174/Wooden_Frames_zx175j.webp"
     },
     {
       "id": 6,
       "title": "Interior Room Doors",
       "products": 6,
       "description": "Modern interior doors for bedrooms, bathrooms, and living spaces.",
-      "image": "/image/Room Doors.webp"
+      "image": "https://res.cloudinary.com/dcc2v0usg/image/upload/v1772432173/Room_Doors_lmak8s.webp"
     },
     {
       "id": 7,

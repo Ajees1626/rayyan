@@ -1,0 +1,24 @@
+# React SPA on Apache (Hostinger shared hosting)
+# Fixes 404 on refresh/direct URL for BrowserRouter
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Leave existing files and directories as-is (assets, API, etc.)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Send all other requests to index.html so React Router can handle them
+  RewriteRule ^ index.html [QSA,L]
+</IfModule>
+
+# Optional: prevent directory listing
+Options -Indexes
+
+# Optional: cache static assets (adjust as needed)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2?|ico|webp|png|jpg|jpeg|gif|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>

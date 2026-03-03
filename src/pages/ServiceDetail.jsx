@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import serviceDetailsData from '../data/serviceDetails.json'
+import AnimateIn from '../components/AnimateIn'
+import Seo from '../components/Seo'
 
 // Get service data from JSON
 const serviceData = serviceDetailsData.services
@@ -94,6 +96,12 @@ function ServiceDetail() {
 
   return (
     <div className="bg-white min-h-screen">
+      <Seo
+        title={service.title}
+        description={service.description}
+        canonical={`/services/${serviceSlug}`}
+        ogImage={service.heroImage}
+      />
       {/* Hero Section */}
       <section ref={heroRef} id="hero-section" className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
@@ -183,6 +191,7 @@ function ServiceDetail() {
       </section>
 
       {/* Product Selection Grid */}
+      <AnimateIn scroll>
       <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-8">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-serif font-medium text-slate-900 mb-6 sm:mb-8 md:mb-10 text-center">
@@ -253,6 +262,7 @@ function ServiceDetail() {
           </div>
         </div>
       </section>
+      </AnimateIn>
 
       {/* Reset Button - Show when product is selected */}
       {selectedProduct && (

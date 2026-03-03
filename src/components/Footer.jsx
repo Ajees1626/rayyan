@@ -73,19 +73,38 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:sales@rayyanwindow.in" className="hover:text-teal-600 transition-colors inline-block py-0.5">
-                  sales@rayyanwindow.in
+                <a href="tel:+919042894878" className="hover:text-teal-600 transition-colors inline-block py-0.5">
+                  +91-90428-94878 (Tirunelveli Showroom)
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@rayyanwindows.com" className="hover:text-teal-600 transition-colors inline-block py-0.5">
+                  info@rayyanwindows.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:windowsrayyan@gmail.com" className="hover:text-teal-600 transition-colors inline-block py-0.5">
+                  windowsrayyan@gmail.com
                 </a>
               </li>
               <li className="pt-1">
+                <span className="font-semibold text-slate-800">Head Office &amp; Packing</span><br />
                 No. 2/20D, Railway Mettu Street<br />
                 Near Nehru Hr. Sec. School<br />
                 TENKASI - 627811
               </li>
               <li className="pt-1">
+                <span className="font-semibold text-slate-800">Showroom</span><br />
                 No:29/12, Near BSNL Office, South Bye Pass Road<br />
                 Vannarpettai, Tirunelveli-627003<br />
-                Tamil Nadu
+                Tamil Nadu<br />
+                <a href="tel:+919042894878" className="text-teal-600 hover:underline mt-1 inline-block">+91-90428-94878</a>
+              </li>
+              <li className="pt-1">
+                <span className="font-semibold text-slate-800">Chennai – Unit 2 (Factory)</span><br />
+                158 Rice Mill Street<br />
+                OMR, Thiruporur<br />
+                Chengalpattu District
               </li>
             </ul>
           </div>
@@ -117,6 +136,16 @@ function Footer() {
             <p className="text-xs sm:text-sm text-slate-600">
               Made for Indian homes • Energy-efficient & secure solutions
             </p>
+          </div>
+          <div className="mt-4 flex justify-center">
+            <a
+              href="https://pixdotsolutions.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-500 hover:text-teal-600 transition-colors pb-1 border-b border-slate-300"
+            >
+              Developed by PIXDOT
+            </a>
           </div>
         </div>
       </div>
