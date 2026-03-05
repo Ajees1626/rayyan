@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap (uncomment and update URL when sitemap is available)
+Sitemap: https://rayyanwindows.com/sitemap.xml
